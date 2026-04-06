@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Me Gusta Spanish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white">
+
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html"><span class="font-black text-xl" style="font-family:Montserrat,sans-serif;color:#1a1d23">Me Gusta <span style="color:#ff2850">Spanish</span></span></a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.home">Home</a>
+        <a href="clases.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.classes">Classes</a>
+        <a href="metodologia.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.methodology">Methodology</a>
+        <a href="profesores.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.teachers">Teachers</a>
+        <a href="sobre-nosotros.html" class="nav-link nav-active text-gray-700 text-sm font-semibold" data-i18n="nav.about">About Us</a>
+        <a href="contacto.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-4">
+        <div class="flex gap-1">
+          <button class="lang-btn text-gray-700" data-lang="en">EN</button>
+          <button class="lang-btn text-gray-700" data-lang="es">ES</button>
+          <button class="lang-btn text-gray-700" data-lang="fr">FR</button>
+        </div>
+        <a href="inscripcion.html" class="btn-primary text-sm py-2 px-5" data-i18n="nav.register">Register Now</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-gray-700 p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+      <a href="index.html" class="nav-link text-gray-800 font-semibold text-sm" data-i18n="nav.home">Home</a>
+      <a href="clases.html" class="nav-link text-gray-800 font-semibold text-sm" data-i18n="nav.classes">Classes</a>
+      <a href="contacto.html" class="nav-link text-gray-800 font-semibold text-sm" data-i18n="nav.contact">Contact</a>
+      <div class="flex gap-2 pt-3">
+        <button class="lang-btn text-gray-800" data-lang="en">EN</button>
+        <button class="lang-btn text-gray-800" data-lang="es">ES</button>
+        <button class="lang-btn text-gray-800" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-20 hero-gradient">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="section-eyebrow mb-3">Our Story</p>
+      <h1 class="section-title text-5xl text-white mb-4" data-i18n="nav.about">About Us</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">Founded with passion in 2005, we've been helping the world fall in love with Spanish and Bolivia ever since.</p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+        <div class="fade-up">
+          <p class="section-eyebrow mb-3">Our Story</p>
+          <h2 class="section-title text-4xl mb-5">How It All Started</h2>
+          <p class="text-gray-500 leading-relaxed mb-4">Me Gusta Spanish was born in 2005, when Elizabeth and Fernando began developing a unique methodology for teaching Spanish — one that would put the student's needs first and weave Bolivian culture into every lesson.</p>
+          <p class="text-gray-500 leading-relaxed mb-4">After 6 years of developing and refining their approach, they opened the doors to Me Gusta Spanish School in 2011 in the heart of Sucre — Bolivia's constitutional capital and one of the most beautiful colonial cities in South America.</p>
+          <p class="text-gray-500 leading-relaxed">Today, with 750+ students from over 50 countries and 3 dedicated native teachers, Me Gusta Spanish is recognized as one of the most effective and welcoming Spanish schools in Bolivia.</p>
+        </div>
+        <div class="fade-up">
+          <div class="grid grid-cols-2 gap-5">
+            <div class="stat-card">
+              <p class="text-4xl font-black mb-1" style="color:#ff2850">2005</p>
+              <p class="text-gray-500 text-sm">School founded</p>
+            </div>
+            <div class="stat-card">
+              <p class="text-4xl font-black mb-1" style="color:#00c0c1">750+</p>
+              <p class="text-gray-500 text-sm">Students worldwide</p>
+            </div>
+            <div class="stat-card">
+              <p class="text-4xl font-black mb-1" style="color:#ff2850">50+</p>
+              <p class="text-gray-500 text-sm">Countries represented</p>
+            </div>
+            <div class="stat-card">
+              <p class="text-4xl font-black mb-1" style="color:#00c0c1">20+</p>
+              <p class="text-gray-500 text-sm">Years of experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission -->
+      <div class="bg-gray-50 rounded-3xl p-12 mb-20 fade-up">
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="section-eyebrow mb-3">Our Mission</p>
+          <h2 class="section-title text-4xl mb-6">"Spanish lessons should focus on the needs of each student"</h2>
+          <p class="text-gray-500 leading-relaxed text-lg">We believe language learning is most effective when it's personal, cultural, and fun. Every student who walks through our doors — virtually or in person — gets a learning experience tailored to their goals, their pace, and their curiosity about Bolivia and Latin America.</p>
+        </div>
+      </div>
+
+      <!-- Sucre -->
+      <div class="grid md:grid-cols-2 gap-16 items-center fade-up">
+        <div class="order-2 md:order-1">
+          <div class="rounded-3xl overflow-hidden" style="height:320px;background:linear-gradient(135deg,rgba(255,40,80,0.08),rgba(0,192,193,0.12));display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px">
+            <span class="text-7xl">🏛️</span>
+            <p class="font-bold text-xl" style="font-family:Montserrat,sans-serif">Sucre, Bolivia</p>
+            <p class="text-gray-500">La Ciudad Blanca</p>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <p class="section-eyebrow mb-3">Our Location</p>
+          <h2 class="section-title text-4xl mb-5">Why Sucre?</h2>
+          <p class="text-gray-500 leading-relaxed mb-4">Sucre is Bolivia's constitutional capital and a UNESCO World Heritage city — one of the best-preserved colonial cities in Latin America. Its mild climate, rich history, and vibrant culture make it one of the most popular destinations for travelers wanting to learn Spanish.</p>
+          <p class="text-gray-500 leading-relaxed mb-6">The Bolivian accent is considered one of the clearest and most neutral in South America, making it ideal for learning Spanish that you can use anywhere in the world.</p>
+          <div class="flex items-center gap-3 text-sm text-gray-500">
+            <span>📍</span>
+            <span>Junín 333, Sucre, Bolivia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20" style="background:linear-gradient(135deg,#ff2850,#c91f3f)">
+    <div class="max-w-3xl mx-auto px-6 text-center fade-up">
+      <h2 class="section-title text-4xl text-white mb-4">Come Learn With Us</h2>
+      <p class="text-red-100 mb-8">Join 750+ students from around the world. Face-to-face in Sucre or online from home.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="inscripcion.html" class="btn-secondary" data-i18n="cta.btn">Register Now</a>
+        <a href="contacto.html" style="background:#fff;color:#ff2850;padding:14px 32px;border-radius:50px;font-weight:700;display:inline-block;" data-i18n="cta.btnSecondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-300 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-10">
+        <div>
+          <p class="text-white font-black text-xl mb-3" style="font-family:Montserrat,sans-serif">Me Gusta <span style="color:#ff2850">Spanish</span></p>
+          <p class="text-sm" data-i18n="footer.tagline">The most fun & friendly Spanish school in Sucre, Bolivia.</p>
+        </div>
+        <div>
+          <p class="text-white font-semibold mb-4" data-i18n="footer.quickLinks">Quick Links</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white transition-colors" data-i18n="nav.home">Home</a></li>
+            <li><a href="clases.html" class="hover:text-white transition-colors" data-i18n="nav.classes">Classes</a></li>
+            <li><a href="profesores.html" class="hover:text-white transition-colors" data-i18n="nav.teachers">Teachers</a></li>
+            <li><a href="contacto.html" class="hover:text-white transition-colors" data-i18n="nav.contact">Contact</a></li>
+            <li><a href="inscripcion.html" class="hover:text-white transition-colors" data-i18n="nav.register">Register Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold mb-4" data-i18n="footer.contact">Contact</p>
+          <ul class="space-y-2 text-sm">
+            <li>📍 Junín 333, Sucre, Bolivia</li>
+            <li>📞 +591 734 25725</li>
+            <li>✉️ info@megustaspanish.com</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold mb-4">Language</p>
+          <div class="flex gap-2">
+            <button class="lang-btn text-gray-300" data-lang="en">EN</button>
+            <button class="lang-btn text-gray-300" data-lang="es">ES</button>
+            <button class="lang-btn text-gray-300" data-lang="fr">FR</button>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
+        © 2026 Me Gusta Spanish. <span data-i18n="footer.rights">All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5917342572?text=Hello!%20I'm%20interested%20in%20Spanish%20classes." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

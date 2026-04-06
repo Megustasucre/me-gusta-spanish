@@ -1,0 +1,9 @@
+Diseñar una pagina web tailwind css y usa fronted-design, para una escuela de español, se llama Me Gusta Spanish, es una escuela localizada en Sucre, Bolivia.
+Tiene lo siguientes Colores de la marca:  #ff2850, #00c0c1
+Tenemos dos paginas ya diseñadas una en WordPress en el siguiente LInk, esta la diseñe yo como una opcion: https://brown-cod-227951.hostingersite.com/
+tenemos otra diseñada por un programador web que es la siguiente: https://ashdabash2926.github.io/migusta/index.html
+La web Original es: MegustaSpanish.com.
+La idea es que sea una pagina profesional dirigida hacia extranjeros que quieran venir a Bolivia, se debe considerar los idiomas de ingles español y francés.
+DE las paginas web, toma lo mas útil y mejora la UX. puede sacar información extra del archivo plan_desarrollo que esta en la carpeta archivos de avance.
+Debe tener un formulario de contacto y un formulario de inscripción. 
+Ademas considera que las pestañas se deben abrir en paginas distitnas que no sea solo una pestaña
