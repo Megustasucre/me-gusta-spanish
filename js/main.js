@@ -61,62 +61,55 @@ function animateCounter(el) {
 // ── FACULTY CAROUSEL ─────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   const track    = document.getElementById('carousel-track');
-  const viewport = document.getElementById('carousel-viewport');
   const dotsWrap = document.getElementById('carousel-dots');
   const btnPrev  = document.getElementById('carousel-prev');
   const btnNext  = document.getElementById('carousel-next');
+  const counter  = document.getElementById('carousel-counter');
   if (!track) return;
 
-  const slides = track.querySelectorAll('.teacher-slide');
-  let current = 0;
+  const slides = Array.from(track.querySelectorAll('.teacher-slide'));
+  const total  = slides.length;
+  let current  = 0;
 
-  function getSlidesVisible() {
-    if (window.innerWidth < 640)  return 1;
-    if (window.innerWidth < 1024) return 2;
-    return 3;
-  }
-
-  function totalPages() {
-    return slides.length - getSlidesVisible() + 1;
-  }
-
-  function buildDots() {
-    dotsWrap.innerHTML = '';
-    for (let i = 0; i < totalPages(); i++) {
-      const dot = document.createElement('button');
-      dot.style.cssText = 'width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;transition:all 0.3s';
-      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-      dot.addEventListener('click', () => goTo(i));
-      dotsWrap.appendChild(dot);
-    }
-    updateDots();
-  }
-
-  function updateDots() {
-    dotsWrap.querySelectorAll('button').forEach((d, i) => {
-      d.style.background = i === current ? '#ff2850' : '#d0d0d0';
-      d.style.width      = i === current ? '24px'   : '8px';
-      d.style.borderRadius = '4px';
-    });
-  }
+  // Build dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.style.cssText = 'width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;transition:all 0.3s;background:#d0d0d0';
+    dot.setAttribute('aria-label', 'Teacher ' + (i + 1));
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
 
   function goTo(index) {
-    const pages = totalPages();
-    current = Math.max(0, Math.min(index, pages - 1));
-    const slideW = slides[0].offsetWidth + 24; // width + gap
-    track.style.transform = `translateX(-${current * slideW}px)`;
-    updateDots();
+    current = ((index % total) + total) % total; // wrap around
+    track.style.transform = `translateX(-${current * 100}%)`;
+
+    // Counter
+    if (counter) counter.textContent = `${current + 1} / ${total}`;
+
+    // Dots
+    dotsWrap.querySelectorAll('button').forEach((d, i) => {
+      d.style.background   = i === current ? '#ff2850' : '#d0d0d0';
+      d.style.width        = i === current ? '24px' : '8px';
+      d.style.borderRadius = '4px';
+    });
+
+    // Buttons opacity — dim at ends (no wrap visual cue)
     btnPrev.style.opacity = current === 0 ? '0.35' : '1';
-    btnNext.style.opacity = current >= pages - 1 ? '0.35' : '1';
+    btnNext.style.opacity = current === total - 1 ? '0.35' : '1';
   }
 
-  btnPrev.addEventListener('click', () => goTo(current - 1));
-  btnNext.addEventListener('click', () => goTo(current + 1));
+  btnPrev.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+  btnNext.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
 
-  // Rebuild on resize
-  window.addEventListener('resize', () => { buildDots(); goTo(0); });
+  // Swipe support (mobile)
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend',   e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? goTo(current + 1) : goTo(current - 1);
+  });
 
-  buildDots();
   goTo(0);
 });
 
