@@ -73,7 +73,8 @@ const translations = {
       title: "Start Your Spanish Journey",
       subtitle: "Join students from 50+ countries who learned Spanish in Sucre, Bolivia.",
       btn: "Register Now",
-      btnSecondary: "Contact Us"
+      btnSecondary: "Contact Us",
+      trust: "Free level assessment · Reply within 24h · All levels welcome"
     },
     footer: {
       tagline: "The most fun & friendly Spanish school in Sucre, Bolivia.",
@@ -158,7 +159,8 @@ const translations = {
       title: "Empieza Tu Aventura en Español",
       subtitle: "Únete a alumnos de más de 50 países que aprendieron español en Sucre, Bolivia.",
       btn: "Inscríbete Ya",
-      btnSecondary: "Contáctanos"
+      btnSecondary: "Contáctanos",
+      trust: "Evaluación de nivel gratuita · Respuesta en menos de 24h · Todos los niveles"
     },
     footer: {
       tagline: "La escuela de español más divertida y amigable de Sucre, Bolivia.",
@@ -243,7 +245,8 @@ const translations = {
       title: "Commencez Votre Aventure en Espagnol",
       subtitle: "Rejoignez des étudiants de plus de 50 pays qui ont appris l'espagnol à Sucre, Bolivie.",
       btn: "S'inscrire Maintenant",
-      btnSecondary: "Nous Contacter"
+      btnSecondary: "Nous Contacter",
+      trust: "Évaluation de niveau gratuite · Réponse sous 24h · Tous niveaux bienvenus"
     },
     footer: {
       tagline: "L'école d'espagnol la plus sympa de Sucre, Bolivie.",
