@@ -69,88 +69,79 @@
   </nav>
 
   <!-- ═══ HERO ══════════════════════════════════════════ -->
-  <section class="hero-bg min-h-screen flex items-center py-20 relative" style="padding-top:120px">
+  <section class="min-h-screen flex items-end relative" style="padding-bottom:80px">
 
-    <!-- Blobs -->
-    <div class="blob blob-red"  style="width:500px;height:500px;top:-100px;right:-100px"></div>
-    <div class="blob blob-teal" style="width:400px;height:400px;bottom:-80px;left:-80px"></div>
+    <!-- Background — Sucre photo with Ken Burns -->
+    <div style="position:absolute;inset:0;overflow:hidden">
+      <div class="hero-kenburns" style="position:absolute;inset:-8%;background-image:url('Imagenes/fondo-derecho.jpg');background-size:cover;background-position:center 30%"></div>
+    </div>
 
-    <div class="max-w-7xl mx-auto px-6 w-full">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+    <!-- Cinematic overlays -->
+    <!-- Bottom dark gradient (text readability) -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(4,6,18,0.95) 0%, rgba(4,6,18,0.65) 40%, rgba(4,6,18,0.2) 75%, rgba(4,6,18,0.05) 100%)"></div>
+    <!-- Left vignette -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(4,6,18,0.55) 0%, transparent 55%)"></div>
+    <!-- Subtle color tint — teal/blue cinematic grade -->
+    <div style="position:absolute;inset:0;background:rgba(0,40,60,0.18);mix-blend-mode:multiply"></div>
+    <!-- Letterbox bars -->
+    <div style="position:absolute;top:0;left:0;right:0;height:5px;background:#000"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;height:5px;background:#000"></div>
 
-        <!-- Left — Text -->
-        <div>
-          <!-- Handwritten greeting -->
-          <div class="mb-4">
-            <span class="handwritten text-3xl" style="color:#ff2850">¡Hola!</span>
-            <span class="handwritten text-2xl text-gray-300 ml-2">We're Me Gusta Spanish</span>
-          </div>
+    <!-- Location tag — bottom right -->
+    <div style="position:absolute;bottom:44px;right:32px;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.15);border-radius:50px;padding:8px 16px;z-index:10">
+      <span style="font-size:13px">📍</span>
+      <div>
+        <p style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#fff;margin:0;line-height:1.3">Sucre, Bolivia</p>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.55);margin:0;line-height:1.3">UNESCO Heritage City · 2,810m</p>
+      </div>
+    </div>
 
-          <p class="eyebrow mb-4" data-i18n="hero.eyebrow">Spanish School · Sucre, Bolivia</p>
+    <!-- Scroll hint -->
+    <div style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.5">
+      <p style="font-family:'Inter',sans-serif;font-size:10px;font-weight:600;color:#fff;letter-spacing:2px;text-transform:uppercase">Scroll</p>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="14" height="22" rx="7" stroke="white" stroke-width="1.5"/>
+        <circle cx="8" cy="7" r="2" fill="white"><animate attributeName="cy" values="7;14;7" dur="1.8s" repeatCount="indefinite"/></circle>
+      </svg>
+    </div>
 
-          <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:24px">
-            <span data-i18n="hero.title">Learn Spanish</span><br/>
-            <span style="color:#ff2850;font-style:italic" data-i18n="hero.titleAccent">the Fun Way</span>
-          </h1>
+    <!-- Content -->
+    <div class="max-w-7xl mx-auto px-6 w-full relative z-10" style="padding-bottom:60px">
 
-          <p class="text-gray-300 leading-relaxed mb-8 max-w-lg" style="font-size:1.05rem" data-i18n="hero.subtitle">
-            Probably the most fun & friendly Spanish school in Sucre! Native teachers, small groups, and real cultural immersion since 2011.
-          </p>
+      <!-- Heading -->
+      <div class="mb-4">
+        <span class="handwritten text-3xl" style="color:#ff2850">¡Hola!</span>
+        <span class="handwritten text-2xl text-gray-300 ml-2">We're Me Gusta Spanish</span>
+      </div>
 
-          <div class="flex flex-wrap gap-4 mb-10">
-            <a href="inscripcion.html" class="btn-red" data-i18n="hero.cta">Start Learning Now</a>
-            <a href="clases.html" class="btn-outline-white" data-i18n="hero.ctaSecondary">View Courses</a>
-          </div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:700;color:#fff;line-height:1.08;margin-bottom:20px;max-width:700px">
+        <span data-i18n="hero.title">Learn Spanish</span><br/>
+        <span style="color:#ff2850;font-style:italic" data-i18n="hero.titleAccent">the Fun Way</span>
+      </h1>
 
-          <!-- Trust row -->
-          <div class="flex flex-wrap gap-6">
-            <div class="flex items-center gap-2 text-gray-400 text-sm">
-              <span style="color:#00c0c1;font-size:16px">✓</span> Certified Native Teachers
-            </div>
-            <div class="flex items-center gap-2 text-gray-400 text-sm">
-              <span style="color:#00c0c1;font-size:16px">✓</span> All Levels
-            </div>
-            <div class="flex items-center gap-2 text-gray-400 text-sm">
-              <span style="color:#00c0c1;font-size:16px">✓</span> Since 2011
-            </div>
-          </div>
+      <p class="text-gray-300 leading-relaxed mb-8" style="font-size:1.1rem;max-width:560px" data-i18n="hero.subtitle">
+        Probably the most fun &amp; friendly Spanish school in Sucre! Native teachers, small groups, and real cultural immersion since 2011.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="inscripcion.html" class="btn-red" data-i18n="hero.cta">Start Learning Now</a>
+        <a href="clases.html" class="btn-outline-white" data-i18n="hero.ctaSecondary">View Courses</a>
+      </div>
+
+      <!-- Trust row -->
+      <div class="flex flex-wrap gap-6">
+        <div class="flex items-center gap-2 text-gray-400 text-sm">
+          <span style="color:#00c0c1;font-size:16px">✓</span> Certified Native Teachers
         </div>
-
-        <!-- Right — Polaroid + stats -->
-        <div class="hidden md:block relative" style="height:500px">
-
-          <!-- Main polaroid — Sucre city -->
-          <div class="polaroid absolute" style="width:270px;top:20px;left:30px;transform:rotate(-3deg)">
-            <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
-              alt="Sucre, Bolivia"
-              style="width:100%;height:210px;object-fit:cover;border-radius:2px;display:block"
-            />
-            <p class="polaroid-caption" style="color:#555">Sucre, Bolivia 🏛️</p>
-          </div>
-
-          <!-- Second polaroid — students in class -->
-          <div class="polaroid absolute" style="width:230px;top:110px;right:10px;transform:rotate(3.5deg)">
-            <img
-              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80"
-              alt="Spanish class"
-              style="width:100%;height:180px;object-fit:cover;border-radius:2px;display:block"
-            />
-            <p class="polaroid-caption" style="color:#555">Spanish lessons 📖</p>
-          </div>
-
-          <!-- Stat badges -->
-          <div class="stat-badge absolute" style="bottom:40px;left:0;min-width:110px">
-            <p class="num" style="color:#ff2850"><span class="counter" data-target="750" data-suffix="+">750+</span></p>
-            <p style="font-family:'Inter',sans-serif;font-size:11px;color:#888;margin-top:4px" data-i18n="stats.students">Students</p>
-          </div>
-          <div class="stat-badge absolute" style="bottom:40px;right:0;min-width:110px">
-            <p class="num" style="color:#00c0c1">2011</p>
-            <p style="font-family:'Inter',sans-serif;font-size:11px;color:#888;margin-top:4px" data-i18n="stats.founded">Founded</p>
-          </div>
-
-          <!-- Rotating tag -->
-          <div class="rotating-tag absolute" style="top:6px;right:50px">Fun & Friendly! 🎉</div>
+        <div class="flex items-center gap-2 text-gray-400 text-sm">
+          <span style="color:#00c0c1;font-size:16px">✓</span> All Levels Welcome
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 text-sm">
+          <span style="color:#00c0c1;font-size:16px">✓</span> Face-to-Face &amp; Online
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 text-sm">
+          <span style="color:#00c0c1;font-size:16px">✓</span> Since 2011
         </div>
       </div>
     </div>
@@ -193,12 +184,12 @@
     <div class="ticker-track py-2.5 text-white" style="font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px">
       <span class="mx-10">🎉 NATIVE BOLIVIAN TEACHERS</span>
       <span class="mx-10">🌎 750+ STUDENTS · 50+ COUNTRIES</span>
-      <span class="mx-10">📍 JUNÍN 333, SUCRE, BOLIVIA</span>
+      <span class="mx-10">📍 AUDIENCIA #97, SUCRE, BOLIVIA</span>
       <span class="mx-10">💻 ONLINE & FACE-TO-FACE CLASSES</span>
       <span class="mx-10">⭐ FOUNDED 2011 · 20+ YEARS EXP.</span>
       <span class="mx-10">🎉 NATIVE BOLIVIAN TEACHERS</span>
       <span class="mx-10">🌎 750+ STUDENTS · 50+ COUNTRIES</span>
-      <span class="mx-10">📍 JUNÍN 333, SUCRE, BOLIVIA</span>
+      <span class="mx-10">📍 AUDIENCIA #97, SUCRE, BOLIVIA</span>
       <span class="mx-10">💻 ONLINE & FACE-TO-FACE CLASSES</span>
       <span class="mx-10">⭐ FOUNDED 2011 · 20+ YEARS EXP.</span>
     </div>
@@ -209,31 +200,33 @@
     <div class="max-w-7xl mx-auto px-6">
       <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center" class="why-grid">
 
-        <!-- LEFT — Stacked polaroids -->
+        <!-- LEFT — Stacked polaroids with float animation -->
         <div class="fade-up" style="position:relative;height:540px;min-width:300px">
 
-          <!-- Main polaroid — Sucre city -->
-          <div class="polaroid" style="width:340px;position:absolute;top:0;left:0;transform:rotate(-4deg);z-index:2">
+          <!-- Main polaroid — Sucre city (local image) -->
+          <div class="polaroid polaroid-float-1" style="width:340px;position:absolute;top:0;left:0;z-index:2">
             <img
-              src="https://images.unsplash.com/photo-1560969184-10fe8719e047?w=700&q=80"
+              src="Imagenes/fondo-derecho.jpg"
               alt="Sucre, Bolivia"
               style="width:100%;height:260px;object-fit:cover;border-radius:2px;display:block"
             />
             <p class="polaroid-caption">Sucre — our beautiful home 🏛️</p>
           </div>
 
-          <!-- Secondary polaroid — students -->
-          <div class="polaroid" style="width:280px;position:absolute;bottom:0;right:0;transform:rotate(3.5deg);z-index:3">
+          <!-- Secondary polaroid — students learning -->
+          <div class="polaroid polaroid-float-2" style="width:280px;position:absolute;bottom:0;right:0;z-index:3">
             <img
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80"
+              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80"
               alt="Students learning Spanish"
               style="width:100%;height:210px;object-fit:cover;border-radius:2px;display:block"
             />
             <p class="polaroid-caption">Class in action! 📚</p>
           </div>
 
-          <!-- Small accent tag -->
-          <div class="rotating-tag" style="position:absolute;bottom:240px;left:260px;z-index:4;font-size:13px">Since 2011 ✨</div>
+          <!-- Opción disponible: rotating tag "Since 2011"
+          <div class="rotating-tag" style="position:absolute;bottom:248px;left:268px;z-index:4;font-size:13px">Since 2011 ✨</div>
+          -->
+
         </div>
 
         <!-- RIGHT — Quote + features -->
@@ -241,24 +234,33 @@
           <p class="eyebrow mb-5">Why Choose Us</p>
 
           <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,2.9rem);font-weight:700;font-style:italic;line-height:1.25;color:#1a1a1a;margin-bottom:24px">
-            "Spanish lessons should focus on the needs of each student — because everyone is individual and learns in their own way."
+            "Every student is different — and your Spanish lessons should be too."
           </h2>
 
-          <p style="font-size:15px;color:#6b6b6b;line-height:1.8;margin-bottom:28px">
-            Founded in 2005 by Elizabeth and Fernando, Me Gusta Spanish was built on a simple belief: that great teaching puts the student first. After six years of developing their methodology, they opened the school's doors in 2011 — and haven't looked back.
+          <p style="font-size:15px;color:#6b6b6b;line-height:1.8;margin-bottom:20px">
+            Me Gusta Spanish was born in Sucre, Bolivia's cultural heart, with one clear idea: language learning works best when it's personal, warm, and rooted in real life. Our native Bolivian teachers don't just teach grammar — they open doors to a culture, a city, and a way of life.
           </p>
           <p style="font-size:15px;color:#6b6b6b;line-height:1.8;margin-bottom:32px">
-            We change, improve and innovate every year. Our teachers are native Bolivian speakers who bring not just language, but culture, warmth and context to every single lesson.
+            Whether you're joining us in Sucre or learning online from anywhere in the world, you'll find small groups, flexible schedules, and the kind of genuine attention that makes the difference between memorizing a language and actually <em>speaking</em> it.
           </p>
 
-          <!-- Feature pills -->
-          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px">
-            <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:50px;border:1.5px solid #e0e0e0;color:#444">native schoolteachers</span>
-            <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:50px;border:1.5px solid #ff2850;color:#ff2850;background:rgba(255,40,80,0.05)">small groups</span>
-            <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:50px;border:1.5px solid #e0e0e0;color:#444">private lessons</span>
-            <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:50px;border:1.5px solid #00c0c1;color:#00c0c1;background:rgba(0,192,193,0.05)">cultural immersion</span>
-            <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:50px;border:1.5px solid #e0e0e0;color:#444">surf beaches</span>
-            <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:50px;border:1.5px solid #e0e0e0;color:#444">beginner to advanced</span>
+          <!-- Feature pills — ordered by importance -->
+          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:32px">
+            <!-- Row 1: primary differentiators -->
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:700;padding:8px 18px;border-radius:50px;border:1.5px solid #ff2850;color:#ff2850;background:rgba(255,40,80,0.06)">👩‍🏫 Native Bolivian Teachers</span>
+              <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:700;padding:8px 18px;border-radius:50px;border:1.5px solid #00c0c1;color:#00c0c1;background:rgba(0,192,193,0.06)">👥 Small Groups (max 6)</span>
+            </div>
+            <!-- Row 2: learning options -->
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:8px 18px;border-radius:50px;border:1.5px solid #e0e0e0;color:#555">🎓 Private Lessons Available</span>
+              <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:8px 18px;border-radius:50px;border:1.5px solid #e0e0e0;color:#555">💻 Online &amp; Face-to-Face</span>
+            </div>
+            <!-- Row 3: levels & culture -->
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:8px 18px;border-radius:50px;border:1.5px solid #e0e0e0;color:#555">📊 Beginner to Advanced</span>
+              <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:8px 18px;border-radius:50px;border:1.5px solid #e0e0e0;color:#555">🌎 Cultural Immersion</span>
+            </div>
           </div>
 
           <a href="sobre-nosotros.html" class="btn-outline-dark">Our Story →</a>
@@ -473,7 +475,7 @@
         <div>
           <p style="font-family:'Inter',sans-serif;font-weight:600;color:#fff;margin-bottom:16px;font-size:13px;text-transform:uppercase;letter-spacing:1px" data-i18n="footer.contact">Contact</p>
           <ul style="list-style:none;padding:0;font-size:14px;line-height:2">
-            <li>📍 Junín 333, Sucre, Bolivia</li>
+            <li>📍 Audiencia #97, Sucre, Bolivia</li>
             <li>📞 +591 734 25725</li>
             <li>📞 +591 734 00447</li>
             <li>✉️ info@megustaspanish.com</li>
