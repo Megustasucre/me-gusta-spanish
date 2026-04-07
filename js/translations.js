@@ -11,11 +11,16 @@ const translations = {
     },
     hero: {
       eyebrow: "Spanish School in Sucre, Bolivia",
-      title: "Learn Spanish the",
-      titleAccent: "Fun Way",
-      subtitle: "Probably the most fun & friendly Spanish school in Sucre! Native teachers, small groups, and real cultural immersion.",
+      greetingSub: "We're Me Gusta Spanish",
+      title: "Learn Spanish",
+      titleAccent: "the Fun Way",
+      subtitle: "Probably the most fun & friendly Spanish school in Sucre! Native teachers, small groups, and real cultural immersion since 2011.",
       cta: "Start Learning Now",
-      ctaSecondary: "View Courses"
+      ctaSecondary: "View Courses",
+      trust1: "Certified Native Teachers",
+      trust2: "All Levels Welcome",
+      trust3: "Face-to-Face & Online",
+      trust4: "Since 2011"
     },
     stats: {
       students: "Registered Students",
@@ -24,41 +29,49 @@ const translations = {
       founded: "Founded"
     },
     why: {
-      title: "Why Choose Us?",
-      subtitle: "We believe Spanish lessons should focus on the needs of each student",
-      r1title: "Native Bolivian Teachers",
-      r1desc: "Learn from certified native speakers who bring authentic culture into every lesson.",
-      r2title: "Small Groups",
-      r2desc: "Personalized attention with small group sizes so you actually learn faster.",
-      r3title: "Cultural Immersion",
-      r3desc: "Activities, excursions, and real-life practice beyond the classroom.",
-      r4title: "Flexible Schedule",
-      r4desc: "Classes designed around your agenda — mornings, afternoons, or online."
+      eyebrow: "Why Choose Us",
+      quote: "\"Every student is different — and your Spanish lessons should be too.\"",
+      p1: "Me Gusta Spanish was born in Sucre, Bolivia's cultural heart, with one clear idea: language learning works best when it's personal, warm, and rooted in real life. Our native Bolivian teachers don't just teach grammar — they open doors to a culture, a city, and a way of life.",
+      p2: "Whether you're joining us in Sucre or learning online from anywhere in the world, you'll find small groups, flexible schedules, and the kind of genuine attention that makes the difference between memorizing a language and actually speaking it.",
+      story: "Our Story →"
     },
     courses: {
-      title: "Our Courses",
-      subtitle: "Face-to-face in Sucre or online from anywhere in the world",
+      eyebrow: "Our Courses",
+      title: "Learn",
+      titleAccent: "Your Way",
+      subtitle: "Face-to-face in the heart of Sucre or live online from anywhere in the world — same teachers, same quality.",
       f2fTitle: "Face-to-Face Classes",
-      f2fDesc: "Immersive Spanish lessons in the heart of Sucre, Bolivia. Small groups, private lessons, and real cultural experiences.",
-      f2fFeatures: ["Small groups (max 6 students)", "Private lessons available", "All levels: Beginner to Advanced", "Cultural activities included"],
+      f2fDesc: "Immerse yourself in the language and the culture. Our classrooms are in the colonial heart of Sucre — small groups, real conversations, and experiences that go far beyond textbooks.",
+      f2fFeat1: "Small groups — maximum 6 students",
+      f2fFeat2: "Private lessons available",
+      f2fFeat3: "All levels: Beginner to Advanced",
+      f2fFeat4: "Cultural activities & excursions included",
       onlineTitle: "Online Classes",
-      onlineDesc: "Interactive live sessions with native instructors. Learn from home with the same quality and warmth.",
-      onlineFeatures: ["34 video lessons available", "8 different class types", "Live sessions via Zoom", "Flexible schedule"],
+      onlineDesc: "Live sessions with our native Bolivian teachers — the same warmth, the same method, from wherever you are. No recordings, no robots: real people, real conversations.",
+      onlineFeat1: "Live sessions via Zoom",
+      onlineFeat2: "34 video lessons + 8 class types",
+      onlineFeat3: "Flexible schedule — your timezone",
+      onlineFeat4: "All levels welcome",
       learnMore: "Learn More",
       viewAll: "View All Courses"
     },
     teachers: {
-      title: "Meet Our Teachers",
-      subtitle: "Certified native Bolivian teachers with over 20 years of combined experience",
+      eyebrow: "The Team",
+      title: "Meet Our",
+      titleAccent: "Teachers",
+      subtitle: "Certified native Bolivian teachers with 20+ years of combined experience",
       viewAll: "Meet All Teachers"
     },
     testimonials: {
-      title: "What Our Students Say",
+      eyebrow: "Testimonials",
+      title: "What Our",
+      titleAccent: "Students Say",
       subtitle: "Join 750+ students who have learned Spanish with us"
     },
     cta: {
-      title: "Ready to Start Your Spanish Journey?",
-      subtitle: "Join students from over 50 countries who have learned Spanish in Sucre.",
+      label: "Ready to start?",
+      title: "Start Your Spanish Journey",
+      subtitle: "Join students from 50+ countries who learned Spanish in Sucre, Bolivia.",
       btn: "Register Now",
       btnSecondary: "Contact Us"
     },
@@ -70,6 +83,7 @@ const translations = {
       rights: "All rights reserved."
     }
   },
+
   es: {
     nav: {
       home: "Inicio",
@@ -82,11 +96,16 @@ const translations = {
     },
     hero: {
       eyebrow: "Escuela de Español en Sucre, Bolivia",
-      title: "Aprende Español de",
-      titleAccent: "Forma Divertida",
-      subtitle: "¡Probablemente la escuela de español más divertida y amigable de Sucre! Profesores nativos, grupos pequeños e inmersión cultural real.",
+      greetingSub: "Somos Me Gusta Spanish",
+      title: "Aprende Español",
+      titleAccent: "de Forma Divertida",
+      subtitle: "¡Probablemente la escuela de español más divertida y amigable de Sucre! Profesores nativos, grupos pequeños e inmersión cultural real desde 2011.",
       cta: "Empieza Ahora",
-      ctaSecondary: "Ver Cursos"
+      ctaSecondary: "Ver Cursos",
+      trust1: "Profesores Nativos Certificados",
+      trust2: "Todos los Niveles",
+      trust3: "Presencial y En Línea",
+      trust4: "Desde 2011"
     },
     stats: {
       students: "Alumnos Registrados",
@@ -95,41 +114,49 @@ const translations = {
       founded: "Fundada"
     },
     why: {
-      title: "¿Por Qué Elegirnos?",
-      subtitle: "Creemos que las clases de español deben centrarse en las necesidades de cada alumno",
-      r1title: "Profesores Bolivianos Nativos",
-      r1desc: "Aprende con hablantes nativos certificados que llevan la cultura auténtica a cada clase.",
-      r2title: "Grupos Pequeños",
-      r2desc: "Atención personalizada con grupos pequeños para que aprendas más rápido.",
-      r3title: "Inmersión Cultural",
-      r3desc: "Actividades, excursiones y práctica real más allá del aula.",
-      r4title: "Horario Flexible",
-      r4desc: "Clases diseñadas según tu agenda — mañanas, tardes o en línea."
+      eyebrow: "¿Por Qué Elegirnos?",
+      quote: "\"Cada alumno es diferente — y tus clases de español también deberían serlo.\"",
+      p1: "Me Gusta Spanish nació en Sucre, el corazón cultural de Bolivia, con una idea clara: el aprendizaje de idiomas funciona mejor cuando es personal, cálido y conectado con la vida real. Nuestros profesores bolivianos nativos no solo enseñan gramática — abren puertas a una cultura, una ciudad y una forma de vida.",
+      p2: "Ya sea que te unas a nosotros en Sucre o aprendas en línea desde cualquier parte del mundo, encontrarás grupos pequeños, horarios flexibles y la atención genuina que marca la diferencia entre memorizar un idioma y realmente hablarlo.",
+      story: "Nuestra Historia →"
     },
     courses: {
-      title: "Nuestros Cursos",
-      subtitle: "Presencial en Sucre o en línea desde cualquier parte del mundo",
+      eyebrow: "Nuestros Cursos",
+      title: "Aprende",
+      titleAccent: "a Tu Manera",
+      subtitle: "Presencial en el corazón de Sucre o en vivo en línea desde cualquier parte del mundo — mismos profesores, misma calidad.",
       f2fTitle: "Clases Presenciales",
-      f2fDesc: "Clases de español inmersivas en el corazón de Sucre, Bolivia. Grupos pequeños, clases privadas y experiencias culturales reales.",
-      f2fFeatures: ["Grupos pequeños (máx. 6 alumnos)", "Clases privadas disponibles", "Todos los niveles: Básico a Avanzado", "Actividades culturales incluidas"],
+      f2fDesc: "Sumérgete en el idioma y la cultura. Nuestras aulas están en el corazón colonial de Sucre — grupos pequeños, conversaciones reales y experiencias que van mucho más allá de los libros de texto.",
+      f2fFeat1: "Grupos pequeños — máximo 6 alumnos",
+      f2fFeat2: "Clases privadas disponibles",
+      f2fFeat3: "Todos los niveles: Básico a Avanzado",
+      f2fFeat4: "Actividades culturales y excursiones incluidas",
       onlineTitle: "Clases en Línea",
-      onlineDesc: "Sesiones interactivas en vivo con instructores nativos. Aprende desde casa con la misma calidad y calidez.",
-      onlineFeatures: ["34 lecciones en video disponibles", "8 tipos de clases distintos", "Sesiones en vivo vía Zoom", "Horario flexible"],
+      onlineDesc: "Sesiones en vivo con nuestros profesores bolivianos nativos — la misma calidez, el mismo método, desde donde estés. Sin grabaciones, sin robots: personas reales, conversaciones reales.",
+      onlineFeat1: "Sesiones en vivo vía Zoom",
+      onlineFeat2: "34 lecciones en video + 8 tipos de clases",
+      onlineFeat3: "Horario flexible — tu zona horaria",
+      onlineFeat4: "Todos los niveles bienvenidos",
       learnMore: "Saber Más",
       viewAll: "Ver Todos los Cursos"
     },
     teachers: {
-      title: "Conoce a Nuestros Profesores",
+      eyebrow: "El Equipo",
+      title: "Conoce a Nuestros",
+      titleAccent: "Profesores",
       subtitle: "Profesores bolivianos nativos y certificados con más de 20 años de experiencia combinada",
       viewAll: "Conocer Todos los Profesores"
     },
     testimonials: {
-      title: "Lo Que Dicen Nuestros Alumnos",
+      eyebrow: "Testimonios",
+      title: "Lo Que Dicen",
+      titleAccent: "Nuestros Alumnos",
       subtitle: "Únete a más de 750 alumnos que aprendieron español con nosotros"
     },
     cta: {
-      title: "¿Listo para Empezar tu Aventura en Español?",
-      subtitle: "Únete a alumnos de más de 50 países que aprendieron español en Sucre.",
+      label: "¿Listo para empezar?",
+      title: "Empieza Tu Aventura en Español",
+      subtitle: "Únete a alumnos de más de 50 países que aprendieron español en Sucre, Bolivia.",
       btn: "Inscríbete Ya",
       btnSecondary: "Contáctanos"
     },
@@ -141,6 +168,7 @@ const translations = {
       rights: "Todos los derechos reservados."
     }
   },
+
   fr: {
     nav: {
       home: "Accueil",
@@ -153,11 +181,16 @@ const translations = {
     },
     hero: {
       eyebrow: "École d'Espagnol à Sucre, Bolivie",
-      title: "Apprenez l'Espagnol de",
-      titleAccent: "Façon Amusante",
-      subtitle: "Probablement l'école d'espagnol la plus sympa de Sucre ! Professeurs natifs, petits groupes et immersion culturelle authentique.",
+      greetingSub: "Nous sommes Me Gusta Spanish",
+      title: "Apprenez l'Espagnol",
+      titleAccent: "avec Plaisir",
+      subtitle: "Probablement l'école d'espagnol la plus sympa de Sucre ! Professeurs natifs, petits groupes et immersion culturelle authentique depuis 2011.",
       cta: "Commencer Maintenant",
-      ctaSecondary: "Voir les Cours"
+      ctaSecondary: "Voir les Cours",
+      trust1: "Professeurs Natifs Certifiés",
+      trust2: "Tous Niveaux",
+      trust3: "Présentiel et En Ligne",
+      trust4: "Depuis 2011"
     },
     stats: {
       students: "Étudiants Inscrits",
@@ -166,41 +199,49 @@ const translations = {
       founded: "Fondée"
     },
     why: {
-      title: "Pourquoi Nous Choisir ?",
-      subtitle: "Nous croyons que les cours d'espagnol doivent s'adapter aux besoins de chaque étudiant",
-      r1title: "Professeurs Boliviens Natifs",
-      r1desc: "Apprenez avec des locuteurs natifs certifiés qui apportent une culture authentique à chaque cours.",
-      r2title: "Petits Groupes",
-      r2desc: "Attention personnalisée avec de petits groupes pour apprendre plus vite.",
-      r3title: "Immersion Culturelle",
-      r3desc: "Activités, excursions et pratique réelle au-delà de la salle de classe.",
-      r4title: "Horaire Flexible",
-      r4desc: "Des cours adaptés à votre agenda — matin, après-midi ou en ligne."
+      eyebrow: "Pourquoi Nous Choisir ?",
+      quote: "\"Chaque étudiant est différent — et vos cours d'espagnol devraient l'être aussi.\"",
+      p1: "Me Gusta Spanish est née à Sucre, le cœur culturel de la Bolivie, avec une idée claire : l'apprentissage des langues fonctionne mieux quand il est personnel, chaleureux et ancré dans la vie réelle. Nos professeurs boliviens natifs n'enseignent pas seulement la grammaire — ils ouvrent des portes vers une culture, une ville et une façon de vivre.",
+      p2: "Que vous nous rejoigniez à Sucre ou que vous appreniez en ligne depuis n'importe où dans le monde, vous trouverez des petits groupes, des horaires flexibles et l'attention sincère qui fait la différence entre mémoriser une langue et vraiment la parler.",
+      story: "Notre Histoire →"
     },
     courses: {
-      title: "Nos Cours",
-      subtitle: "En présentiel à Sucre ou en ligne depuis n'importe où dans le monde",
+      eyebrow: "Nos Cours",
+      title: "Apprenez",
+      titleAccent: "à Votre Façon",
+      subtitle: "En présentiel au cœur de Sucre ou en direct en ligne depuis n'importe où — mêmes professeurs, même qualité.",
       f2fTitle: "Cours en Présentiel",
-      f2fDesc: "Cours d'espagnol immersifs au cœur de Sucre, Bolivie. Petits groupes, cours particuliers et expériences culturelles réelles.",
-      f2fFeatures: ["Petits groupes (max 6 étudiants)", "Cours particuliers disponibles", "Tous niveaux : Débutant à Avancé", "Activités culturelles incluses"],
+      f2fDesc: "Plongez dans la langue et la culture. Nos salles de classe sont au cœur colonial de Sucre — petits groupes, vraies conversations et expériences qui vont bien au-delà des manuels.",
+      f2fFeat1: "Petits groupes — maximum 6 étudiants",
+      f2fFeat2: "Cours particuliers disponibles",
+      f2fFeat3: "Tous niveaux : Débutant à Avancé",
+      f2fFeat4: "Activités culturelles et excursions incluses",
       onlineTitle: "Cours en Ligne",
-      onlineDesc: "Sessions interactives en direct avec des instructeurs natifs. Apprenez de chez vous avec la même qualité.",
-      onlineFeatures: ["34 leçons vidéo disponibles", "8 types de cours différents", "Sessions en direct via Zoom", "Horaire flexible"],
+      onlineDesc: "Sessions en direct avec nos professeurs boliviens natifs — la même chaleur, la même méthode, depuis où que vous soyez. Pas d'enregistrements, pas de robots : de vraies personnes, de vraies conversations.",
+      onlineFeat1: "Sessions en direct via Zoom",
+      onlineFeat2: "34 leçons vidéo + 8 types de cours",
+      onlineFeat3: "Horaire flexible — votre fuseau horaire",
+      onlineFeat4: "Tous niveaux bienvenus",
       learnMore: "En Savoir Plus",
       viewAll: "Voir Tous les Cours"
     },
     teachers: {
-      title: "Rencontrez Nos Professeurs",
+      eyebrow: "L'Équipe",
+      title: "Rencontrez Nos",
+      titleAccent: "Professeurs",
       subtitle: "Professeurs boliviens natifs et certifiés avec plus de 20 ans d'expérience combinée",
       viewAll: "Voir Tous les Professeurs"
     },
     testimonials: {
-      title: "Ce Que Disent Nos Étudiants",
+      eyebrow: "Témoignages",
+      title: "Ce Que Disent",
+      titleAccent: "Nos Étudiants",
       subtitle: "Rejoignez 750+ étudiants qui ont appris l'espagnol avec nous"
     },
     cta: {
-      title: "Prêt à Commencer Votre Aventure en Espagnol ?",
-      subtitle: "Rejoignez des étudiants de plus de 50 pays qui ont appris l'espagnol à Sucre.",
+      label: "Prêt à commencer ?",
+      title: "Commencez Votre Aventure en Espagnol",
+      subtitle: "Rejoignez des étudiants de plus de 50 pays qui ont appris l'espagnol à Sucre, Bolivie.",
       btn: "S'inscrire Maintenant",
       btnSecondary: "Nous Contacter"
     },
@@ -232,15 +273,12 @@ function applyTranslations(lang) {
     const key = el.dataset.i18n;
     const keys = key.split('.');
     let val = t;
-    for (const k of keys) {
-      val = val?.[k];
-    }
-    if (val !== undefined) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = val;
-      } else {
-        el.textContent = val;
-      }
+    for (const k of keys) val = val?.[k];
+    if (val === undefined) return;
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.placeholder = val;
+    } else {
+      el.textContent = val;
     }
   });
 }
