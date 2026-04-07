@@ -94,13 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
       d.style.borderRadius = '4px';
     });
 
-    // Buttons opacity — dim at ends (no wrap visual cue)
-    btnPrev.style.opacity = current === 0 ? '0.35' : '1';
-    btnNext.style.opacity = current === total - 1 ? '0.35' : '1';
+    // Buttons always active (infinite wrap)
+    btnPrev.style.opacity = '1';
+    btnNext.style.opacity = '1';
   }
 
-  btnPrev.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
-  btnNext.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
+  btnPrev.addEventListener('click', () => goTo(current - 1));
+  btnNext.addEventListener('click', () => goTo(current + 1));
 
   // Swipe support (mobile)
   let touchStartX = 0;
