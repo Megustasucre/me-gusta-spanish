@@ -56,10 +56,10 @@ const translations = {
       viewAll: "View All Courses"
     },
     teachers: {
-      eyebrow: "The Team",
-      title: "Meet Our",
-      titleAccent: "Teachers",
-      subtitle: "Certified native Bolivian teachers with 20+ years of combined experience",
+      eyebrow: "The Me Gusta Family",
+      title: "Meet the People",
+      titleAccent: "Behind the School",
+      subtitle: "A school built on real connections — meet the people who make learning feel like coming home.",
       viewAll: "Meet All Teachers"
     },
     testimonials: {
@@ -141,10 +141,10 @@ const translations = {
       viewAll: "Ver Todos los Cursos"
     },
     teachers: {
-      eyebrow: "El Equipo",
-      title: "Conoce a Nuestros",
-      titleAccent: "Profesores",
-      subtitle: "Profesores bolivianos nativos y certificados con más de 20 años de experiencia combinada",
+      eyebrow: "La Familia Me Gusta",
+      title: "Conoce a las Personas",
+      titleAccent: "Detrás de la Escuela",
+      subtitle: "Una escuela construida sobre conexiones reales — conoce a quienes hacen que aprender se sienta como estar en casa.",
       viewAll: "Conocer Todos los Profesores"
     },
     testimonials: {
@@ -226,10 +226,10 @@ const translations = {
       viewAll: "Voir Tous les Cours"
     },
     teachers: {
-      eyebrow: "L'Équipe",
-      title: "Rencontrez Nos",
-      titleAccent: "Professeurs",
-      subtitle: "Professeurs boliviens natifs et certifiés avec plus de 20 ans d'expérience combinée",
+      eyebrow: "La Famille Me Gusta",
+      title: "Rencontrez les Personnes",
+      titleAccent: "Derrière l'École",
+      subtitle: "Une école fondée sur de vraies connexions — rencontrez ceux qui font qu'apprendre ressemble à rentrer chez soi.",
       viewAll: "Voir Tous les Professeurs"
     },
     testimonials: {
