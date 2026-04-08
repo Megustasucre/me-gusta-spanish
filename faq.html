@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Me Gusta Spanish</title>
+  <meta name="description" content="Frequently asked questions about Spanish classes in Sucre, Bolivia. Prices, schedules, levels, payments, accommodation and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .faq-item { border-bottom: 1px solid #e8e8e8; }
+    .faq-item summary { display:flex;align-items:center;justify-content:space-between;padding:20px 0;cursor:pointer;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;color:#1a1a1a;list-style:none;user-select:none; }
+    .faq-item summary::-webkit-details-marker { display:none; }
+    .faq-item summary .faq-arrow { transition:transform 0.3s;flex-shrink:0;color:#ff2850; }
+    .faq-item[open] summary .faq-arrow { transform:rotate(180deg); }
+    .faq-item .faq-body { padding:0 0 20px;font-size:14px;color:#6b6b6b;line-height:1.8; }
+    .faq-category { font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff2850;margin-bottom:8px;display:block; }
+  </style>
+</head>
+<body style="background:#fafaf8">
+
+  <!-- ═══ NAVBAR ═══════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" style="background:rgba(26,26,26,0.85);backdrop-filter:blur(12px)">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-1">
+        <span class="logo-text text-white font-bold text-2xl" style="font-family:'Cormorant Garamond',serif;letter-spacing:-0.5px">
+          Me Gusta <span style="color:#ff2850;font-style:italic">Spanish</span>
+        </span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"          class="nav-link text-white" data-i18n="nav.home">Home</a>
+        <a href="clases.html"         class="nav-link text-white" data-i18n="nav.classes">Classes</a>
+        <a href="metodologia.html"    class="nav-link text-white" data-i18n="nav.methodology">Methodology</a>
+        <a href="profesores.html"     class="nav-link text-white" data-i18n="nav.teachers">Teachers</a>
+        <a href="sobre-nosotros.html" class="nav-link text-white" data-i18n="nav.about">About</a>
+        <a href="contacto.html"       class="nav-link text-white" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-4">
+        <div class="flex gap-1">
+          <button class="lang-btn text-white" data-lang="en">EN</button>
+          <button class="lang-btn text-white" data-lang="es">ES</button>
+          <button class="lang-btn text-white" data-lang="fr">FR</button>
+        </div>
+        <a href="inscripcion.html" class="btn-red" data-i18n="nav.register">Register Now</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-white p-1">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
+      <a href="index.html"          data-i18n="nav.home">Home</a>
+      <a href="clases.html"         data-i18n="nav.classes">Classes</a>
+      <a href="metodologia.html"    data-i18n="nav.methodology">Methodology</a>
+      <a href="profesores.html"     data-i18n="nav.teachers">Teachers</a>
+      <a href="sobre-nosotros.html" data-i18n="nav.about">About</a>
+      <a href="contacto.html"       data-i18n="nav.contact">Contact</a>
+      <div class="flex gap-2 pt-4">
+        <button class="lang-btn text-gray-700" data-lang="en">EN</button>
+        <button class="lang-btn text-gray-700" data-lang="es">ES</button>
+        <button class="lang-btn text-gray-700" data-lang="fr">FR</button>
+      </div>
+      <a href="inscripcion.html" class="btn-red mt-4 block text-center" data-i18n="nav.register">Register Now</a>
+    </div>
+  </nav>
+
+  <!-- ═══ PAGE HERO ════════════════════════════════════ -->
+  <section style="position:relative;overflow:hidden;padding:160px 0 80px;background:#0f1620">
+    <div style="position:absolute;inset:0;background-image:url('Imagenes/fondo-derecho.jpg');background-size:cover;background-position:center;opacity:0.1"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0f1620 0%,#1a2a3a 100%)"></div>
+    <div class="blob blob-red"  style="width:400px;height:400px;top:-120px;right:-80px"></div>
+    <div class="blob blob-teal" style="width:300px;height:300px;bottom:-100px;left:-60px"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center" style="position:relative;z-index:1">
+      <p class="eyebrow mb-5" data-i18n="faq.eyebrow">FAQ</p>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:20px">
+        <span data-i18n="faq.title">Common</span> <span style="color:#ff2850;font-style:italic" data-i18n="faq.titleAccent">Questions</span>
+      </h1>
+      <p style="font-size:1.05rem;color:rgba(255,255,255,0.7);max-width:520px;margin:0 auto;line-height:1.7" data-i18n="faq.heroSubtitle">
+        Everything you need to know before booking your first class.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ CONTENT ══════════════════════════════════ -->
+  <section style="padding:100px 0;background:#fff">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <!-- ── Getting Started ── -->
+      <div style="margin-bottom:64px" class="fade-up">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(255,40,80,0.1);display:flex;align-items:center;justify-content:center">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#ff2850" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:#1a1a1a" data-i18n="faq.catStart">Getting Started</h2>
+        </div>
+        <div style="border-top:1px solid #e8e8e8">
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q1">When can I start?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.a1">Face-to-face classes begin every Monday. Online classes can start any day — just book 48 hours in advance.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.qLevel">Do I need prior Spanish knowledge?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.aLevel">Not at all. We welcome complete beginners. Your first step is a free level assessment with Fernando — a short 15-minute conversation to understand where you're starting from.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.qAssess">What is the level assessment?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.aAssess">It's a short, relaxed conversation with Fernando — no written tests, no pressure. He'll ask a few questions to gauge your vocabulary and grammar, and place you in the right group or design the right program for you.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q6">Can I switch to a different level?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.a6">Absolutely. If you progress faster than expected — it happens! — your teacher will move you up. Just let us know.</p></div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- ── Courses & Schedule ── -->
+      <div style="margin-bottom:64px" class="fade-up">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(255,40,80,0.1);display:flex;align-items:center;justify-content:center">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#ff2850" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:#1a1a1a" data-i18n="faq.catCourses">Courses &amp; Schedule</h2>
+        </div>
+        <div style="border-top:1px solid #e8e8e8">
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q3">How many students are in a group?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.a3">Group Immersion has a maximum of 4 students. Cultural Connection has a maximum of 8. Private and Duo are 1–2 students only.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.qSchedule">What are the class hours?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.aSchedule">Face-to-face group classes run Monday to Friday, 8:30 AM – 12:30 PM. Private and Duo classes have flexible scheduling. Online classes adapt to your timezone — morning, afternoon, or evening.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q4">What if I miss a class?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.a4">Let us know at least 24 hours in advance and we'll arrange a make-up class. Same-day no-shows cannot be recovered.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q5">Are materials included?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.a5">Yes — textbook, workbook, and notebook are included in all face-to-face programs at no extra charge.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.qCert">Do you give certificates?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.aCert">Yes. After completing a program you receive a certificate indicating your course, level, and hours completed. It is signed by the school director.</p></div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- ── Payment & Booking ── -->
+      <div style="margin-bottom:64px" class="fade-up">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(0,192,193,0.1);display:flex;align-items:center;justify-content:center">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#00c0c1" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+          </div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:#1a1a1a" data-i18n="faq.catPayment">Payment &amp; Booking</h2>
+        </div>
+        <div style="border-top:1px solid #e8e8e8">
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.q2">How do I pay?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.a2">We accept PayPal, Wise, or bank transfer for international students. Cash is also welcome on arrival in Sucre.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.qDeposit">Do I need to pay a deposit to reserve?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.aDeposit">For face-to-face programs we ask for a small deposit to confirm your spot. The remainder is paid on arrival. Online packs are paid in full before the first session.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.qRefund">What is your cancellation policy?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.aRefund">If you cancel more than 7 days before your start date, we refund your deposit in full. Cancellations within 7 days are non-refundable, but we can reschedule your start date once at no extra cost.</p></div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- ── Online Classes ── -->
+      <div style="margin-bottom:64px" class="fade-up">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(0,192,193,0.1);display:flex;align-items:center;justify-content:center">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#00c0c1" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+          </div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:#1a1a1a" data-i18n="faq.catOnline">Online Classes</h2>
+        </div>
+        <div style="border-top:1px solid #e8e8e8">
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.qZoom">What platform do you use for online classes?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.aZoom">We use Zoom for all live sessions. You'll receive a link before each class. No account is required — just a computer or phone with a camera.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.qExpire">Do my online pack hours expire?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.aExpire">Trial Class: no expiry. Starter Pack (5h): use within 60 days of purchase. Immersion Pack (10h): use within 3 months. If you need an extension, contact us — we're flexible.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.qSameTeacher">Will I have the same teacher every session?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.aSameTeacher">Yes — we always assign you the same teacher. Consistency matters for learning. If you'd prefer to work with a different teacher at any point, just let us know and we'll arrange it.</p></div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- ── Accommodation ── -->
+      <div style="margin-bottom:64px" class="fade-up">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(255,40,80,0.1);display:flex;align-items:center;justify-content:center">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#ff2850" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:#1a1a1a" data-i18n="faq.catAccom">Accommodation</h2>
+        </div>
+        <div style="border-top:1px solid #e8e8e8">
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.qHostFamily">Do you offer homestay / host family placements?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.aHostFamily">Yes. We work with selected host families in Sucre who offer room and board. Living with a local family is the most effective way to practice Spanish outside the classroom. Contact us for availability and pricing.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span data-i18n="faq.qHotel">Can you recommend hotels or hostels?</span>
+              <svg class="faq-arrow" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="faq-body"><p data-i18n="faq.aHotel">Absolutely. Sucre has a wide range of accommodation for every budget. We're happy to suggest options near the school and help you settle in. Just ask when you contact us.</p></div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- ── Still have questions? ── -->
+      <div class="fade-up" style="background:#fafaf8;border-radius:20px;padding:40px;text-align:center">
+        <p class="eyebrow mb-3" data-i18n="faq.stillEyebrow">Still have questions?</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;margin-bottom:12px" data-i18n="faq.stillTitle">We're happy to help</h3>
+        <p style="font-size:14px;color:#6b6b6b;margin-bottom:28px;max-width:400px;margin-left:auto;margin-right:auto" data-i18n="faq.stillDesc">Can't find your answer here? Write to us on WhatsApp or email — we usually reply within a few hours.</p>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+          <a href="https://wa.me/5917342572?text=Hello!%20I%20have%20a%20question%20about%20classes." target="_blank" class="btn-red" data-i18n="faq.stillWhatsapp">Message on WhatsApp</a>
+          <a href="contacto.html" class="btn-teal" data-i18n="faq.stillContact">Contact Form</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════ -->
+  <footer style="background:#1a1a1a;color:#aaa;padding:72px 0 32px">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:12px">
+            Me Gusta <span style="color:#ff2850;font-style:italic">Spanish</span>
+          </p>
+          <p style="font-size:14px;line-height:1.7;margin-bottom:20px" data-i18n="footer.tagline">The most fun & friendly Spanish school in Sucre, Bolivia.</p>
+          <div style="display:flex;gap:10px">
+            <a href="https://www.facebook.com/MeGustaSpanishSchool" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#aaa;text-decoration:none">f</a>
+            <a href="https://www.instagram.com/megustaspanishschool" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#aaa;text-decoration:none">ig</a>
+            <a href="https://wa.me/5917342572" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#aaa;text-decoration:none">wa</a>
+          </div>
+        </div>
+        <div>
+          <p style="font-family:'Inter',sans-serif;font-weight:600;color:#fff;margin-bottom:16px;font-size:13px;text-transform:uppercase;letter-spacing:1px" data-i18n="footer.quickLinks">Quick Links</p>
+          <ul style="list-style:none;padding:0">
+            <li style="margin-bottom:8px"><a href="index.html"          style="font-size:14px;text-decoration:none;color:#aaa" data-i18n="nav.home">Home</a></li>
+            <li style="margin-bottom:8px"><a href="clases.html"         style="font-size:14px;text-decoration:none;color:#aaa" data-i18n="nav.classes">Classes</a></li>
+            <li style="margin-bottom:8px"><a href="metodologia.html"    style="font-size:14px;text-decoration:none;color:#aaa" data-i18n="nav.methodology">Methodology</a></li>
+            <li style="margin-bottom:8px"><a href="profesores.html"     style="font-size:14px;text-decoration:none;color:#aaa" data-i18n="nav.teachers">Teachers</a></li>
+            <li style="margin-bottom:8px"><a href="faq.html"            style="font-size:14px;text-decoration:none;color:#aaa" data-i18n="nav.faq">FAQ</a></li>
+            <li style="margin-bottom:8px"><a href="inscripcion.html"    style="font-size:14px;text-decoration:none;color:#aaa" data-i18n="nav.register">Register Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-family:'Inter',sans-serif;font-weight:600;color:#fff;margin-bottom:16px;font-size:13px;text-transform:uppercase;letter-spacing:1px" data-i18n="footer.contact">Contact</p>
+          <ul style="list-style:none;padding:0;font-size:14px;line-height:2">
+            <li>📍 Audiencia #97, Sucre, Bolivia</li>
+            <li>📞 +591 734 25725</li>
+            <li>📞 +591 734 00447</li>
+            <li>✉️ info@megustaspanish.com</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-family:'Inter',sans-serif;font-weight:600;color:#fff;margin-bottom:16px;font-size:13px;text-transform:uppercase;letter-spacing:1px">Language</p>
+          <div style="display:flex;gap:8px;margin-bottom:24px">
+            <button class="lang-btn" style="color:#aaa" data-lang="en">EN</button>
+            <button class="lang-btn" style="color:#aaa" data-lang="es">ES</button>
+            <button class="lang-btn" style="color:#aaa" data-lang="fr">FR</button>
+          </div>
+          <a href="inscripcion.html" class="btn-red" data-i18n="nav.register">Register Now</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid #2d2d2d;padding-top:24px;text-align:center;font-size:13px;color:#555">
+        © 2026 Me Gusta Spanish. <span data-i18n="footer.rights">All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5917342572?text=Hello!%20I'm%20interested%20in%20Spanish%20classes." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
