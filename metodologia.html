@@ -4,177 +4,245 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Methodology — Me Gusta Spanish</title>
+  <meta name="description" content="Learn how Me Gusta Spanish teaches. Conversation-first, student-centered, cultural immersion. 6 years in development." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-white">
+<body style="background:#fafaf8">
 
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html"><span class="font-black text-xl" style="font-family:Montserrat,sans-serif;color:#1a1d23">Me Gusta <span style="color:#ff2850">Spanish</span></span></a>
-      <div class="hidden md:flex items-center gap-7">
-        <a href="index.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.home">Home</a>
-        <a href="clases.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.classes">Classes</a>
-        <a href="metodologia.html" class="nav-link nav-active text-gray-700 text-sm font-semibold" data-i18n="nav.methodology">Methodology</a>
-        <a href="profesores.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.teachers">Teachers</a>
-        <a href="sobre-nosotros.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.about">About Us</a>
-        <a href="contacto.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.contact">Contact</a>
+  <!-- ═══ NAVBAR ═══════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" style="background:rgba(26,26,26,0.85);backdrop-filter:blur(12px)">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-1">
+        <span class="logo-text text-white font-bold text-2xl" style="font-family:'Cormorant Garamond',serif;letter-spacing:-0.5px">
+          Me Gusta <span style="color:#ff2850;font-style:italic">Spanish</span>
+        </span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"          class="nav-link text-white" data-i18n="nav.home">Home</a>
+        <a href="clases.html"         class="nav-link text-white" data-i18n="nav.classes">Classes</a>
+        <a href="metodologia.html"    class="nav-link nav-active text-white" data-i18n="nav.methodology">Methodology</a>
+        <a href="profesores.html"     class="nav-link text-white" data-i18n="nav.teachers">Teachers</a>
+        <a href="sobre-nosotros.html" class="nav-link text-white" data-i18n="nav.about">About</a>
+        <a href="contacto.html"       class="nav-link text-white" data-i18n="nav.contact">Contact</a>
+        <a href="faq.html"            class="nav-link text-white" data-i18n="nav.faq">FAQ</a>
       </div>
       <div class="hidden md:flex items-center gap-4">
         <div class="flex gap-1">
-          <button class="lang-btn text-gray-700" data-lang="en">EN</button>
-          <button class="lang-btn text-gray-700" data-lang="es">ES</button>
-          <button class="lang-btn text-gray-700" data-lang="fr">FR</button>
+          <button class="lang-btn text-white" data-lang="en">EN</button>
+          <button class="lang-btn text-white" data-lang="es">ES</button>
+          <button class="lang-btn text-white" data-lang="fr">FR</button>
         </div>
-        <a href="inscripcion.html" class="btn-primary text-sm py-2 px-5" data-i18n="nav.register">Register Now</a>
+        <a href="inscripcion.html" class="btn-red" data-i18n="nav.register">Register Now</a>
       </div>
-      <button id="menu-btn" class="md:hidden text-gray-700 p-2">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <button id="menu-btn" class="md:hidden text-white p-1">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
       </button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
-      <a href="index.html" class="nav-link text-gray-800 font-semibold text-sm" data-i18n="nav.home">Home</a>
-      <a href="clases.html" class="nav-link text-gray-800 font-semibold text-sm" data-i18n="nav.classes">Classes</a>
-      <a href="contacto.html" class="nav-link text-gray-800 font-semibold text-sm" data-i18n="nav.contact">Contact</a>
+    <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
+      <a href="index.html"          data-i18n="nav.home">Home</a>
+      <a href="clases.html"         data-i18n="nav.classes">Classes</a>
+      <a href="metodologia.html"    data-i18n="nav.methodology">Methodology</a>
+      <a href="profesores.html"     data-i18n="nav.teachers">Teachers</a>
+      <a href="sobre-nosotros.html" data-i18n="nav.about">About</a>
+      <a href="contacto.html"       data-i18n="nav.contact">Contact</a>
+      <a href="faq.html"            data-i18n="nav.faq">FAQ</a>
       <div class="flex gap-2 pt-3">
-        <button class="lang-btn text-gray-800" data-lang="en">EN</button>
-        <button class="lang-btn text-gray-800" data-lang="es">ES</button>
-        <button class="lang-btn text-gray-800" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
       </div>
     </div>
   </nav>
 
-  <section class="pt-32 pb-16 hero-gradient">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <p class="section-eyebrow mb-3">How We Teach</p>
-      <h1 class="section-title text-5xl text-white mb-4" data-i18n="nav.methodology">Methodology</h1>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto">6 years of development. 20+ years of practice. One goal: make you speak Spanish.</p>
+  <!-- ═══ HERO ══════════════════════════════════════════ -->
+  <section style="position:relative;overflow:hidden;padding:160px 0 100px;background:#0f1620">
+    <div style="position:absolute;inset:0;background-image:url('imagenes/fondo-derecho.jpg');background-size:cover;background-position:center;opacity:0.12"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0f1620 0%,#1a2a3a 100%)"></div>
+    <div class="blob blob-red"  style="width:500px;height:500px;top:-150px;right:-100px"></div>
+    <div class="blob blob-teal" style="width:400px;height:400px;bottom:-120px;left:-80px"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center" style="position:relative;z-index:1">
+      <p class="eyebrow mb-4" style="color:rgba(255,255,255,0.7)">How We Teach</p>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:20px">
+        Enjoy Every Lesson.<br><span style="color:#ff2850;font-style:italic">Speak with Confidence.</span>
+      </h1>
+      <p style="color:rgba(255,255,255,0.75);font-size:1.1rem;max-width:580px;margin:0 auto;line-height:1.8">We design an effective methodology for teaching Spanish — making this a fun process with great results.</p>
     </div>
   </section>
 
-  <section class="py-20 bg-white">
+  <!-- ═══ THE ME GUSTA METHOD ══════════════════════════ -->
+  <section style="padding:100px 0;background:#fff">
     <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
 
-      <!-- Core philosophy -->
-      <div class="max-w-3xl mx-auto text-center mb-20 fade-up">
-        <p class="section-eyebrow mb-3">Core Philosophy</p>
-        <h2 class="section-title text-4xl mb-6">"Focus on what the student needs — not what the textbook says"</h2>
-        <p class="text-gray-500 leading-relaxed text-lg">Our methodology was developed over 6 years before we opened the school. It's built on one principle: every student is different, and every lesson should reflect that. No generic courses — just real learning, real conversations, and real progress.</p>
+        <div class="fade-up">
+          <p class="eyebrow mb-4">Our Method</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;line-height:1.25;margin-bottom:20px">
+            The <span style="color:#ff2850;font-style:italic">"Me Gusta"</span> Method
+          </h2>
+          <p style="font-size:15px;color:#6b6b6b;line-height:1.9;margin-bottom:16px">Learning a language, like learning a musical instrument or a new sport, requires constant practice and commitment. After 17 years of teaching Spanish, we know one thing for certain:</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:#1a1a1a;line-height:1.5;margin-bottom:24px;border-left:3px solid #ff2850;padding-left:20px">"Everyone can learn to speak Spanish — no matter what."</p>
+          <p style="font-size:15px;color:#6b6b6b;line-height:1.9">Our methodology has been tried and tested on thousands of students of different nationalities, ages, and backgrounds. It has proven to give excellent results every time.</p>
+        </div>
+
+        <div class="fade-up">
+          <p style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#aaa;margin-bottom:20px">What every student needs</p>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="display:flex;align-items:center;gap:16px;padding:20px 24px;background:#fff;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.06)">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#ff2850;line-height:1;width:32px;flex-shrink:0">1</span>
+              <div>
+                <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#1a1a1a;margin-bottom:2px">Motivation</p>
+                <p style="font-size:13px;color:#6b6b6b">A clear reason to learn — travel, work, love, curiosity.</p>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;padding:20px 24px;background:#fff;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.06)">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#ff2850;line-height:1;width:32px;flex-shrink:0">2</span>
+              <div>
+                <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#1a1a1a;margin-bottom:2px">Commitment</p>
+                <p style="font-size:13px;color:#6b6b6b">Show up, practice daily, stay consistent.</p>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;padding:20px 24px;background:#fff;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.06)">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#ff2850;line-height:1;width:32px;flex-shrink:0">3</span>
+              <div>
+                <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#1a1a1a;margin-bottom:2px">Discipline</p>
+                <p style="font-size:13px;color:#6b6b6b">Even 20 minutes a day adds up fast.</p>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;padding:20px 24px;background:rgba(255,40,80,0.04);border-radius:16px;border:1.5px solid rgba(255,40,80,0.15)">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#ff2850;line-height:1;width:32px;flex-shrink:0">4</span>
+              <div>
+                <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#1a1a1a;margin-bottom:2px">Forget the grammar — just speak</p>
+                <p style="font-size:13px;color:#6b6b6b">Babies don't study grammar. Neither should you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW EVERY CLASS WORKS ═════════════════════════ -->
+  <section style="padding:100px 0;background:#fafaf8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <p class="eyebrow mb-4">Inside the Classroom</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3rem);font-weight:700;margin-bottom:12px">
+          How Every <span style="color:#ff2850;font-style:italic">Class Works</span>
+        </h2>
+        <p style="color:#6b6b6b;font-size:15px;max-width:520px;margin:0 auto;line-height:1.8">Each class is pre-planned and tailored to the needs and prior abilities of each student. Our total immersion method has two parts.</p>
       </div>
 
-      <!-- Pillars -->
-      <div class="grid md:grid-cols-3 gap-8 mb-20">
-        <div class="card bg-gray-50 p-8 fade-up">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-2xl" style="background:rgba(255,40,80,0.1)">🗣️</div>
-          <h3 class="section-title text-xl mb-3">Conversation First</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">We start speaking from day one. Grammar is taught in context — through real conversations, not isolated exercises. You learn by doing.</p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card-organic fade-up" style="padding:48px 40px;border-top:3px solid #ff2850">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
+            <div style="width:48px;height:48px;border-radius:14px;background:#ff2850;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;flex-shrink:0">1</div>
+            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:#1a1a1a;margin:0">Theoretical</h3>
+          </div>
+          <p style="font-size:15px;color:#6b6b6b;line-height:1.9">We explain and practice grammar topics in a logical order, according to the level of difficulty and importance. You understand the structure before you use it.</p>
         </div>
-        <div class="card bg-gray-50 p-8 fade-up">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-2xl" style="background:rgba(0,192,193,0.1)">🧠</div>
-          <h3 class="section-title text-xl mb-3">Student-Centered</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Every lesson is designed around your goals, your vocabulary needs, and your pace. We adapt constantly — not the other way around.</p>
-        </div>
-        <div class="card bg-gray-50 p-8 fade-up">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-2xl" style="background:rgba(255,40,80,0.1)">🌎</div>
-          <h3 class="section-title text-xl mb-3">Cultural Immersion</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Language is culture. We weave Bolivian music, food, history, and traditions into every lesson — making the language come alive.</p>
-        </div>
-        <div class="card bg-gray-50 p-8 fade-up">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-2xl" style="background:rgba(0,192,193,0.1)">😄</div>
-          <h3 class="section-title text-xl mb-3">Fun & Friendly</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Stress kills learning. Our classrooms are relaxed, supportive, and full of laughter. Students learn more when they're comfortable.</p>
-        </div>
-        <div class="card bg-gray-50 p-8 fade-up">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-2xl" style="background:rgba(255,40,80,0.1)">📊</div>
-          <h3 class="section-title text-xl mb-3">Measurable Progress</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">We track your progress week by week. You'll always know where you stand and what the next milestone is — no guesswork.</p>
-        </div>
-        <div class="card bg-gray-50 p-8 fade-up">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-2xl" style="background:rgba(0,192,193,0.1)">🎯</div>
-          <h3 class="section-title text-xl mb-3">Practical Spanish</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">We teach the Spanish you'll actually use — at the market, in a restaurant, making friends, traveling across Latin America.</p>
-        </div>
-      </div>
-
-      <!-- Class types -->
-      <div class="bg-gray-50 rounded-3xl p-12 fade-up">
-        <div class="text-center mb-10">
-          <h2 class="section-title text-3xl">8 Types of Classes</h2>
-          <p class="text-gray-500 mt-2">Every class type serves a different purpose in your learning journey</p>
-        </div>
-        <div class="grid md:grid-cols-4 gap-5">
-          <div class="bg-white rounded-2xl p-5 text-center">
-            <p class="text-2xl mb-2">💬</p>
-            <p class="font-semibold text-sm">Conversation</p>
+        <div class="card-organic fade-up" style="padding:48px 40px;border-top:3px solid #00c0c1">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
+            <div style="width:48px;height:48px;border-radius:14px;background:#00c0c1;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;flex-shrink:0">2</div>
+            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:#1a1a1a;margin:0">Practical</h3>
           </div>
-          <div class="bg-white rounded-2xl p-5 text-center">
-            <p class="text-2xl mb-2">📝</p>
-            <p class="font-semibold text-sm">Grammar</p>
-          </div>
-          <div class="bg-white rounded-2xl p-5 text-center">
-            <p class="text-2xl mb-2">👂</p>
-            <p class="font-semibold text-sm">Listening</p>
-          </div>
-          <div class="bg-white rounded-2xl p-5 text-center">
-            <p class="text-2xl mb-2">✍️</p>
-            <p class="font-semibold text-sm">Writing</p>
-          </div>
-          <div class="bg-white rounded-2xl p-5 text-center">
-            <p class="text-2xl mb-2">🎵</p>
-            <p class="font-semibold text-sm">Music & Culture</p>
-          </div>
-          <div class="bg-white rounded-2xl p-5 text-center">
-            <p class="text-2xl mb-2">📰</p>
-            <p class="font-semibold text-sm">Reading</p>
-          </div>
-          <div class="bg-white rounded-2xl p-5 text-center">
-            <p class="text-2xl mb-2">🏙️</p>
-            <p class="font-semibold text-sm">Real-Life Practice</p>
-          </div>
-          <div class="bg-white rounded-2xl p-5 text-center">
-            <p class="text-2xl mb-2">🎭</p>
-            <p class="font-semibold text-sm">Role Play</p>
-          </div>
+          <p style="font-size:15px;color:#6b6b6b;line-height:1.9">Reading, songs, games, real-life situations, and cultural activities let you use what you learned. Cognitive processes lead to real language appropriation — not just memorization.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-20" style="background:linear-gradient(135deg,#ff2850,#c91f3f)">
-    <div class="max-w-3xl mx-auto px-6 text-center fade-up">
-      <h2 class="section-title text-4xl text-white mb-4">Experience the Difference</h2>
-      <p class="text-red-100 mb-8">See why 750+ students from 50+ countries chose Me Gusta Spanish.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="inscripcion.html" class="btn-secondary" data-i18n="cta.btn">Register Now</a>
-        <a href="contacto.html" style="background:#fff;color:#ff2850;padding:14px 32px;border-radius:50px;font-weight:700;display:inline-block;">Contact Us</a>
+  <!-- ═══ HOW WE LEARN ══════════════════════════════════ -->
+  <section style="padding:100px 0;background:#fff">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+
+        <div class="fade-up">
+          <p class="eyebrow mb-4">The Science Behind It</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;line-height:1.25;margin-bottom:20px">
+            How Do We Learn a <span style="color:#ff2850;font-style:italic">New Language?</span>
+          </h2>
+          <p style="font-size:15px;color:#6b6b6b;line-height:1.9;margin-bottom:20px">There are countless theories and "formulas" that promise fluency fast. The truth is simpler: learning Spanish should be a conscious, disciplined — and enjoyable — activity.</p>
+          <p style="font-size:15px;color:#6b6b6b;line-height:1.9">Children don't study grammar rules — they speak, imitate, and connect sounds to meaning. Our method works the same way: interaction first, rules second.</p>
+        </div>
+
+        <div class="fade-up" style="display:flex;flex-direction:column;gap:16px">
+          <div class="card-organic" style="padding:28px 32px;display:flex;gap:16px;align-items:flex-start">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(255,40,80,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#ff2850" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
+            <div>
+              <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#1a1a1a;margin-bottom:4px">The Baby Brain Approach</p>
+              <p style="font-size:13px;color:#6b6b6b;line-height:1.7">Babies learn by interaction — not by studying rules. We use the same instinct: relate sounds to real things, speak first, analyze later.</p>
+            </div>
+          </div>
+          <div class="card-organic" style="padding:28px 32px;display:flex;gap:16px;align-items:flex-start">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,192,193,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#00c0c1" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            </div>
+            <div>
+              <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#1a1a1a;margin-bottom:4px">Mental Associations</p>
+              <p style="font-size:13px;color:#6b6b6b;line-height:1.7">Link new words to images, stories, or sounds you already know. The word <em>escoba</em> (broom)? Think Pablo Escobar. It sticks.</p>
+            </div>
+          </div>
+          <div class="card-organic" style="padding:28px 32px;display:flex;gap:16px;align-items:flex-start">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(255,40,80,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#ff2850" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#1a1a1a;margin-bottom:4px">Flashcards</p>
+              <p style="font-size:13px;color:#6b6b6b;line-height:1.7">Word on one side, an example or drawing on the other — never just the translation. Context makes vocabulary stick for good.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
+  <!-- ═══ CTA ════════════════════════════════════════════ -->
+  <section style="background:linear-gradient(135deg,#ff5533 0%,#ff2850 45%,#c91f3f 100%);padding:100px 0;position:relative;overflow:hidden">
+    <div style="position:absolute;top:-120px;right:-120px;width:480px;height:480px;background:rgba(255,255,255,0.06);border-radius:60% 40% 30% 70% / 60% 30% 70% 40%"></div>
+    <div style="position:absolute;bottom:-140px;left:-100px;width:420px;height:420px;background:rgba(255,255,255,0.04);border-radius:40% 60% 70% 30% / 40% 50% 60% 50%"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center fade-up">
+      <span class="handwritten text-3xl" style="color:rgba(255,255,255,0.75)">Immerse in the culture</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:700;color:#fff;margin:12px 0 16px">Enjoy Every Lesson. Feel at Home.</h2>
+      <p style="color:rgba(255,255,255,0.85);font-size:1.05rem;margin-bottom:40px">Join 756+ students from 50+ countries who chose Me Gusta Spanish.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px">
+        <a href="inscripcion.html" class="btn-outline-white" data-i18n="nav.register">Register Now</a>
+        <a href="contacto.html" style="background:#fff;color:#ff2850;padding:14px 32px;border-radius:50px;font-family:'Inter',sans-serif;font-weight:700;font-size:14px;text-decoration:none;display:inline-block">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════ -->
   <footer class="bg-gray-900 text-gray-300 py-16">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-10 mb-10">
         <div>
-          <p class="text-white font-black text-xl mb-3" style="font-family:Montserrat,sans-serif">Me Gusta <span style="color:#ff2850">Spanish</span></p>
+          <p class="text-white font-bold text-xl mb-3" style="font-family:'Cormorant Garamond',serif">Me Gusta <span style="color:#ff2850;font-style:italic">Spanish</span></p>
           <p class="text-sm" data-i18n="footer.tagline">The most fun & friendly Spanish school in Sucre, Bolivia.</p>
         </div>
         <div>
           <p class="text-white font-semibold mb-4" data-i18n="footer.quickLinks">Quick Links</p>
           <ul class="space-y-2 text-sm">
-            <li><a href="index.html" class="hover:text-white transition-colors" data-i18n="nav.home">Home</a></li>
-            <li><a href="clases.html" class="hover:text-white transition-colors" data-i18n="nav.classes">Classes</a></li>
-            <li><a href="profesores.html" class="hover:text-white transition-colors" data-i18n="nav.teachers">Teachers</a></li>
-            <li><a href="contacto.html" class="hover:text-white transition-colors" data-i18n="nav.contact">Contact</a></li>
+            <li><a href="index.html"          class="hover:text-white transition-colors" data-i18n="nav.home">Home</a></li>
+            <li><a href="clases.html"         class="hover:text-white transition-colors" data-i18n="nav.classes">Classes</a></li>
+            <li><a href="profesores.html"     class="hover:text-white transition-colors" data-i18n="nav.teachers">Teachers</a></li>
+            <li><a href="contacto.html"       class="hover:text-white transition-colors" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div>
           <p class="text-white font-semibold mb-4" data-i18n="footer.contact">Contact</p>
           <ul class="space-y-2 text-sm">
-            <li>📍 Audiencia #97, Sucre, Bolivia</li>
-            <li>📞 +591 734 25725</li>
-            <li>✉️ info@megustaspanish.com</li>
+            <li>Audiencia #97, Sucre, Bolivia</li>
+            <li>+591 734 25725</li>
+            <li>info@megustaspanish.com</li>
           </ul>
         </div>
         <div>
