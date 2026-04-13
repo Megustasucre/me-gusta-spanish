@@ -591,3 +591,25 @@ Insert between `    }` and `  }`:
 - Generated `sitemap.xml` and `robots.txt` for Google indexing.
 - **Images Update**: Swapped generic Unsplash backgrounds on hero sections across all pages with real local images (`fondo-catedral-sucre`, `recoleta`, `sucre-1`, `estudiates-1`).
 - Included `imagen-material.png` directly in the "Resources and Material" section of the Courses page (`clases.html`).
+
+### Session 7 — 2026-04-13
+- **Navbar logo**: Added `mix-blend-mode:multiply; filter:brightness(2.8) contrast(1.2)` to navbar logo (dark bg) via Python batch script across all 9 pages. Mobile menu logo stays without filter (`height:60px` only — white bg).
+- **Activity photos**: Added real school photos to `clases.html` cultural activities section: `city-tour.webp`, `wally ball.webp`, `cooking-class.jpeg`, `charlate.webp`, `beer-tour.webp`.
+- **Graduation photo** (`grafuacion-alumnos.jpeg`): Added to `index.html` "Why Choose Us" polaroid (replaced Unsplash students photo) and to `sobre-nosotros.html` right column of "How It Started" section (photo + compact stats bar below).
+- **SEO improvements** (batch applied to 8 pages):
+  - `<link rel="canonical">` added to all pages
+  - `og:site_name` added to all pages
+  - OG/Twitter image changed from `favicon.png` → `imagenes/logo-og.webp`
+  - JSON-LD `LanguageSchool + LocalBusiness` schema added to `index.html`
+  - JSON-LD `FAQPage` schema (11 Q&As) added to `faq.html`
+
+### Pending (as of 2026-04-13)
+- ⚠️ **CRÍTICO — Formularios no envían**: `handleContactSubmit` y `handleRegSubmit` no existen en `main.js`. Conectar a Formspree / EmailJS.
+- Fotos reales pendientes (Unsplash en index.html):
+  - Card "Face-to-Face Classes" (~línea 303)
+  - Card "Online Classes" (~línea 346)
+  - Tarjeta Elizabeth co-fundadora (~línea 412)
+  - Tarjeta Fernando co-fundador (~línea 433)
+- Google Analytics (GA4) — no hay tracking instalado
+- Testimonios — verificar si son reales o de ejemplo
+- ⚠️ Inconsistencia mayúsculas en rutas: algunas usan `Imagenes/` (con I mayúscula) y otras `imagenes/`. En Linux (GitHub Pages) sí importa — revisar si hay errores de imagen en producción.
