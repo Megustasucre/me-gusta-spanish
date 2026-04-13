@@ -31,36 +31,47 @@
 <body style="background:#fafaf8">
 
   <!-- NAVBAR -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" style="background:rgba(26,26,26,0.85);backdrop-filter:blur(12px)">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-1">
-        <span class="logo-text text-white font-bold text-2xl" style="font-family:'Cormorant Garamond',serif;letter-spacing:-0.5px">
-          Me Gusta <span style="color:#ff2850;font-style:italic">Spanish</span>
-        </span>
-      </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="index.html"          class="nav-link text-white" data-i18n="nav.home">Home</a>
-        <a href="clases.html"         class="nav-link text-white" data-i18n="nav.classes">Classes</a>
-        <a href="metodologia.html"    class="nav-link text-white" data-i18n="nav.methodology">Methodology</a>
-        <a href="profesores.html"     class="nav-link text-white" data-i18n="nav.teachers">Teachers</a>
-        <a href="sobre-nosotros.html" class="nav-link text-white" data-i18n="nav.about">About</a>
-        <a href="contacto.html"       class="nav-link text-white" data-i18n="nav.contact">Contact</a>
-        <a href="faq.html"            class="nav-link text-white" data-i18n="nav.faq">FAQ</a>
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" style="background:rgba(26,26,26,0.85);backdrop-filter:blur(12px)">
+    <div class="relative max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+
+      <!-- Left links (desktop) -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="nav-link text-white" data-i18n="nav.home">Home</a>
+        <a href="clases.html" class="nav-link text-white" data-i18n="nav.classes">Classes</a>
+        <a href="metodologia.html" class="nav-link text-white" data-i18n="nav.methodology">Methodology</a>
+        <a href="profesores.html" class="nav-link text-white" data-i18n="nav.teachers">Teachers</a>
       </div>
-      <div class="hidden md:flex items-center gap-4">
-        <div class="flex gap-1">
+
+      <!-- Logo centered (desktop: absolute, mobile: in flow) -->
+      <a href="index.html" class="absolute left-1/2 -translate-x-1/2 hidden md:block" style="background:white;border-radius:10px;padding:4px 10px;line-height:0">
+        <img src="Imagenes/logo-me-gusta-spanish.png" alt="Me Gusta Spanish" style="height:44px">
+      </a>
+      <a href="index.html" class="md:hidden" style="background:white;border-radius:10px;padding:3px 8px;line-height:0">
+        <img src="Imagenes/logo-me-gusta-spanish.png" alt="Me Gusta Spanish" style="height:36px">
+      </a>
+
+      <!-- Right: links + lang + register (desktop) -->
+      <div class="hidden md:flex items-center gap-5">
+        <a href="sobre-nosotros.html" class="nav-link text-white" data-i18n="nav.about">About</a>
+        <a href="contacto.html" class="nav-link text-white" data-i18n="nav.contact">Contact</a>
+        <a href="faq.html" class="nav-link text-white" data-i18n="nav.faq">FAQ</a>
+        <div class="flex gap-1 ml-1">
           <button class="lang-btn text-white" data-lang="en">EN</button>
           <button class="lang-btn text-white" data-lang="es">ES</button>
           <button class="lang-btn text-white" data-lang="fr">FR</button>
         </div>
         <a href="inscripcion.html" class="btn-red nav-active" data-i18n="nav.register">Register Now</a>
       </div>
+
+      <!-- Mobile hamburger -->
       <button id="menu-btn" class="md:hidden text-white p-1">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
+
+    <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
       <a href="index.html"          data-i18n="nav.home">Home</a>
       <a href="clases.html"         data-i18n="nav.classes">Classes</a>
@@ -74,7 +85,7 @@
         <button class="lang-btn text-gray-700" data-lang="es">ES</button>
         <button class="lang-btn text-gray-700" data-lang="fr">FR</button>
       </div>
-      <a href="inscripcion.html" class="btn-red mt-4 block text-center nav-active" data-i18n="nav.register">Register Now</a>
+      <a href="inscripcion.html" class="btn-red mt-4 block text-center" data-i18n="nav.register">Register Now</a>
     </div>
   </nav>
 
