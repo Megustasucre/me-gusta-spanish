@@ -169,16 +169,8 @@
 
           </div><!-- /course type -->
 
-          <!-- GOOGLE FORM (face-to-face) -->
-          <div id="google-form-embed" class="hidden">
-            <p class="text-sm text-gray-400 mb-3 text-center" style="font-family:Inter,sans-serif">Complete the form below to register for face-to-face classes in Sucre.</p>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfp-UuNG4F5k7HZ6ZFuN2ogZz9N4g85pboYqonjH3MiFJQoBQ/viewform?embedded=true"
-              width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0"
-              style="border-radius:1rem;min-height:900px">Loading…</iframe>
-          </div>
-
-          <!-- ONLINE FIELDS (shown when online is selected) -->
-          <div id="form-online-fields" class="hidden space-y-6">
+          <!-- FIELDS (shown once any course type is selected) -->
+          <div id="form-fields" class="hidden space-y-6">
 
             <!-- Spanish Level -->
             <div class="mb-5">
@@ -451,7 +443,7 @@
           <button type="submit" class="btn-red w-full text-center text-base py-4" style="font-family:Inter,sans-serif" data-i18n="reg.submit">Submit Registration</button>
           <p class="text-center text-xs text-gray-400" style="font-family:Inter,sans-serif" data-i18n="reg.privacy">We'll contact you within 24 hours to confirm your enrollment and discuss next steps.</p>
 
-          </div><!-- /form-online-fields -->
+          </div><!-- /form-fields -->
 
         </form>
 
@@ -541,11 +533,15 @@
       document.getElementById('lbl-f2f').style.borderColor    = f2f  ? '#ff2850' : '#e5e7eb';
       document.getElementById('lbl-online').style.borderColor = !f2f ? '#00c0c1' : '#e5e7eb';
 
-      // Face-to-face → show Google Form, hide online fields
-      document.getElementById('google-form-embed').classList.toggle('hidden', !f2f);
-      document.getElementById('form-online-fields').classList.toggle('hidden', f2f);
+      // Show the common fields block
+      document.getElementById('form-fields').classList.remove('hidden');
 
-      // Toggle required on pack/course radios
+      // Show/hide conditional sections
+      document.getElementById('section-f2f').classList.toggle('hidden', !f2f);
+      document.getElementById('section-online').classList.toggle('hidden', f2f);
+
+      // Toggle required on program/pack radios
+      document.querySelectorAll('input[name="f2f_program"]').forEach(r => r.required = f2f);
       document.querySelectorAll('input[name="online_pack"]').forEach(r => r.required = !f2f);
       document.querySelectorAll('input[name="online_course"]').forEach(r => r.required = !f2f);
     }
