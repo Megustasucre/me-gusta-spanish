@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /pago-virtual.html
+
+Sitemap: https://megustaspanish.com/sitemap.xml

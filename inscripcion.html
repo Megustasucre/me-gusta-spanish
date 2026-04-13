@@ -3,236 +3,496 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Register — Me Gusta Spanish</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css" />
+
+  <title>Register for Spanish Classes — Me Gusta Spanish</title>
+  <meta name="description" content="Enroll now for face-to-face or online Spanish classes. Book your spot today and receive a free level assessment." />
+  <link rel="icon" type="image/png" href="Imagenes/favicon.png" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Register for Spanish Classes — Me Gusta Spanish" />
+  <meta property="og:description" content="Enroll now for face-to-face or online Spanish classes. Book your spot today and receive a free level assessment." />
+  <meta property="og:image" content="https://megustaspanish.com/Imagenes/favicon.png" />
+  <meta property="og:url" content="https://megustaspanish.com/inscripcion.html" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Register for Spanish Classes — Me Gusta Spanish" />
+  <meta name="twitter:description" content="Enroll now for face-to-face or online Spanish classes. Book your spot today and receive a free level assessment." />
+  <meta name="twitter:image" content="https://megustaspanish.com/Imagenes/favicon.png" />
+  
+  <meta name="robots" content="index, follow" />
 </head>
-<body class="bg-white">
+<body style="background:#fafaf8">
 
   <!-- NAVBAR -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" style="background:rgba(26,26,26,0.85);backdrop-filter:blur(12px)">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html"><span class="font-black text-xl" style="font-family:Montserrat,sans-serif;color:#1a1d23">Me Gusta <span style="color:#ff2850">Spanish</span></span></a>
+      <a href="index.html">
+        <span class="font-black text-xl text-white" style="font-family:'Cormorant Garamond',serif">Me Gusta <span style="color:#ff2850">Spanish</span></span>
+      </a>
       <div class="hidden md:flex items-center gap-7">
-        <a href="index.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.home">Home</a>
-        <a href="clases.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.classes">Classes</a>
-        <a href="metodologia.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.methodology">Methodology</a>
-        <a href="profesores.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.teachers">Teachers</a>
-        <a href="sobre-nosotros.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.about">About Us</a>
-        <a href="contacto.html" class="nav-link text-gray-700 text-sm font-semibold" data-i18n="nav.contact">Contact</a>
+        <a href="index.html" class="nav-link text-gray-300 text-sm font-semibold" style="font-family:Inter,sans-serif" data-i18n="nav.home">Home</a>
+        <a href="clases.html" class="nav-link text-gray-300 text-sm font-semibold" style="font-family:Inter,sans-serif" data-i18n="nav.classes">Classes</a>
+        <a href="metodologia.html" class="nav-link text-gray-300 text-sm font-semibold" style="font-family:Inter,sans-serif" data-i18n="nav.methodology">Methodology</a>
+        <a href="profesores.html" class="nav-link text-gray-300 text-sm font-semibold" style="font-family:Inter,sans-serif" data-i18n="nav.teachers">Teachers</a>
+        <a href="sobre-nosotros.html" class="nav-link text-gray-300 text-sm font-semibold" style="font-family:Inter,sans-serif" data-i18n="nav.about">About Us</a>
+        <a href="faq.html" class="nav-link text-gray-300 text-sm font-semibold" style="font-family:Inter,sans-serif" data-i18n="nav.faq">FAQ</a>
+        <a href="contacto.html" class="nav-link text-gray-300 text-sm font-semibold" style="font-family:Inter,sans-serif" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="hidden md:flex items-center gap-4">
         <div class="flex gap-1">
-          <button class="lang-btn text-gray-700" data-lang="en">EN</button>
-          <button class="lang-btn text-gray-700" data-lang="es">ES</button>
-          <button class="lang-btn text-gray-700" data-lang="fr">FR</button>
+          <button class="lang-btn text-gray-300" data-lang="en">EN</button>
+          <button class="lang-btn text-gray-300" data-lang="es">ES</button>
+          <button class="lang-btn text-gray-300" data-lang="fr">FR</button>
         </div>
-        <a href="inscripcion.html" class="btn-primary text-sm py-2 px-5 nav-active" data-i18n="nav.register">Register Now</a>
+        <a href="inscripcion.html" class="btn-red text-sm py-2 px-5 nav-active" data-i18n="nav.register">Register Now</a>
       </div>
-      <button id="menu-btn" class="md:hidden text-gray-700 p-2">
+      <button id="menu-btn" class="md:hidden text-gray-300 p-2">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
-      <a href="index.html" class="nav-link text-gray-800 font-semibold text-sm" data-i18n="nav.home">Home</a>
-      <a href="clases.html" class="nav-link text-gray-800 font-semibold text-sm" data-i18n="nav.classes">Classes</a>
-      <a href="contacto.html" class="nav-link text-gray-800 font-semibold text-sm" data-i18n="nav.contact">Contact</a>
-      <div class="flex gap-2 pt-3">
-        <button class="lang-btn text-gray-800" data-lang="en">EN</button>
-        <button class="lang-btn text-gray-800" data-lang="es">ES</button>
-        <button class="lang-btn text-gray-800" data-lang="fr">FR</button>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-5" style="background:rgba(26,26,26,0.97)">
+      <div class="flex flex-col gap-3 py-3">
+        <a href="index.html" class="nav-link text-gray-300 font-semibold text-sm" style="font-family:Inter,sans-serif" data-i18n="nav.home">Home</a>
+        <a href="clases.html" class="nav-link text-gray-300 font-semibold text-sm" style="font-family:Inter,sans-serif" data-i18n="nav.classes">Classes</a>
+        <a href="metodologia.html" class="nav-link text-gray-300 font-semibold text-sm" style="font-family:Inter,sans-serif" data-i18n="nav.methodology">Methodology</a>
+        <a href="profesores.html" class="nav-link text-gray-300 font-semibold text-sm" style="font-family:Inter,sans-serif" data-i18n="nav.teachers">Teachers</a>
+        <a href="sobre-nosotros.html" class="nav-link text-gray-300 font-semibold text-sm" style="font-family:Inter,sans-serif" data-i18n="nav.about">About Us</a>
+        <a href="faq.html" class="nav-link text-gray-300 font-semibold text-sm" style="font-family:Inter,sans-serif" data-i18n="nav.faq">FAQ</a>
+        <a href="contacto.html" class="nav-link text-gray-300 font-semibold text-sm" style="font-family:Inter,sans-serif" data-i18n="nav.contact">Contact</a>
+        <a href="inscripcion.html" class="btn-red text-sm py-2 px-4 text-center mt-1 nav-active" data-i18n="nav.register">Register Now</a>
+      </div>
+      <div class="flex gap-2 pt-2 pb-1">
+        <button class="lang-btn text-gray-300" data-lang="en">EN</button>
+        <button class="lang-btn text-gray-300" data-lang="es">ES</button>
+        <button class="lang-btn text-gray-300" data-lang="fr">FR</button>
       </div>
     </div>
   </nav>
 
-  <!-- PAGE HERO -->
-  <section class="pt-32 pb-16 hero-gradient">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <p class="section-eyebrow mb-3">Join Us</p>
-      <h1 class="section-title text-5xl text-white mb-4" data-i18n="nav.register">Register Now</h1>
-      <p class="text-gray-300 text-lg">Fill out the form below and we'll contact you within 24 hours to confirm your enrollment.</p>
+  <!-- HERO -->
+  <section class="relative pt-36 pb-20 overflow-hidden" style="background:#0f1620">
+    <div style="position:absolute;inset:0;background-image:url('Imagenes/sucre-1.webp');background-size:cover;background-position:center;opacity:0.35"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,16,24,0.60) 0%,rgba(10,16,24,0.92) 100%)"></div>
+    <div class="blob blob-red"  style="width:500px;height:500px;top:-150px;right:-100px;opacity:0.12"></div>
+    <div class="blob blob-teal" style="width:400px;height:400px;bottom:-120px;left:-80px;opacity:0.10"></div>
+    <div class="relative max-w-4xl mx-auto px-6 text-center">
+      <p class="section-eyebrow mb-3" data-i18n="reg.eyebrow">Join Us</p>
+      <h1 class="section-title text-5xl md:text-6xl text-white mb-5" data-i18n="nav.register">Register Now</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto" style="font-family:Lora,serif" data-i18n="reg.subtitle">Fill out the form below and we'll contact you within 24 hours to confirm your enrollment.</p>
     </div>
   </section>
 
   <!-- FORM -->
-  <section class="py-20 bg-gray-50">
+  <section class="py-20" style="background:#fafaf8">
     <div class="max-w-3xl mx-auto px-6">
-      <div class="bg-white rounded-3xl shadow-sm p-10 fade-up">
+      <div class="card-organic p-8 md:p-12 fade-up">
+
         <form id="reg-form" onsubmit="handleRegSubmit(event)" class="space-y-6">
 
-          <h3 class="section-title text-2xl mb-2">Personal Information</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div>
-              <label class="form-label">First Name *</label>
-              <input type="text" class="form-input" placeholder="John" required />
-            </div>
-            <div>
-              <label class="form-label">Last Name *</label>
-              <input type="text" class="form-input" placeholder="Smith" required />
+          <!-- Personal Information -->
+          <div>
+            <h3 class="section-title text-2xl mb-6" data-i18n="reg.personalInfo">Personal Information</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label" data-i18n="reg.firstName">First Name *</label>
+                <input type="text" class="form-input" data-i18n="reg.firstNamePh" placeholder="John" required />
+              </div>
+              <div>
+                <label class="form-label" data-i18n="reg.lastName">Last Name *</label>
+                <input type="text" class="form-input" data-i18n="reg.lastNamePh" placeholder="Smith" required />
+              </div>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label class="form-label">Nationality *</label>
-              <input type="text" class="form-input" placeholder="e.g. American, French..." required />
+              <label class="form-label" data-i18n="reg.nationality">Nationality *</label>
+              <input type="text" class="form-input" data-i18n="reg.nationalityPh" placeholder="e.g. American, French..." required />
             </div>
             <div>
-              <label class="form-label">Date of Birth</label>
+              <label class="form-label" data-i18n="reg.dob">Date of Birth</label>
               <input type="date" class="form-input" />
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label class="form-label">Email *</label>
-              <input type="email" class="form-input" placeholder="john@example.com" required />
+              <label class="form-label" data-i18n="reg.email">Email *</label>
+              <input type="email" class="form-input" data-i18n="reg.emailPh" placeholder="john@example.com" required />
             </div>
             <div>
-              <label class="form-label">Phone / WhatsApp *</label>
-              <input type="tel" class="form-input" placeholder="+1 555 000 0000" required />
+              <label class="form-label" data-i18n="reg.phone">Phone / WhatsApp *</label>
+              <input type="tel" class="form-input" data-i18n="reg.phonePh" placeholder="+1 555 000 0000" required />
             </div>
           </div>
 
           <hr class="border-gray-100 my-2" />
-          <h3 class="section-title text-2xl mb-2">Course Details</h3>
 
+          <!-- Course Details -->
           <div>
-            <label class="form-label">Course Type *</label>
-            <div class="grid grid-cols-2 gap-4 mt-2">
-              <label class="flex items-center gap-3 p-4 rounded-2xl border-2 cursor-pointer transition-colors hover:border-red-400" id="lbl-f2f">
-                <input type="radio" name="course_type" value="face-to-face" class="accent-red-500" onchange="highlightType()" required />
-                <div>
-                  <p class="font-semibold text-sm">🏫 Face-to-Face</p>
-                  <p class="text-gray-400 text-xs">In Sucre, Bolivia</p>
-                </div>
-              </label>
-              <label class="flex items-center gap-3 p-4 rounded-2xl border-2 cursor-pointer transition-colors hover:border-teal-400" id="lbl-online">
-                <input type="radio" name="course_type" value="online" class="accent-teal-500" onchange="highlightType()" />
-                <div>
-                  <p class="font-semibold text-sm">💻 Online</p>
-                  <p class="text-gray-400 text-xs">Live via Zoom</p>
-                </div>
-              </label>
-            </div>
-          </div>
+            <h3 class="section-title text-2xl mb-6" data-i18n="reg.courseDetails">Course Details</h3>
 
-          <div>
-            <label class="form-label">Spanish Level *</label>
-            <select class="form-input" required>
-              <option value="">Select your level...</option>
-              <option>🌱 Complete Beginner (no Spanish at all)</option>
-              <option>📗 Beginner (basic greetings & vocabulary)</option>
-              <option>📘 Intermediate (can hold simple conversations)</option>
-              <option>📙 Upper Intermediate</option>
-              <option>🚀 Advanced</option>
-            </select>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div>
-              <label class="form-label">Preferred Start Date *</label>
-              <input type="date" class="form-input" required />
+            <div class="mb-5">
+              <label class="form-label mb-3" data-i18n="reg.courseType">Course Type *</label>
+              <div class="grid grid-cols-2 gap-4 mt-2">
+                <!-- Face-to-Face -->
+                <label class="flex items-center gap-3 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-400" id="lbl-f2f">
+                  <input type="radio" name="course_type" value="face-to-face" class="accent-red-500 mt-0.5 flex-shrink-0" onchange="highlightType()" required />
+                  <div>
+                    <div class="flex items-center gap-2 mb-1">
+                      <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#ff2850"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                      <p class="font-semibold text-sm" style="font-family:Inter,sans-serif" data-i18n="reg.f2fTitle">Face-to-Face</p>
+                    </div>
+                    <p class="text-gray-400 text-xs" style="font-family:Inter,sans-serif" data-i18n="reg.f2fSub">In Sucre, Bolivia</p>
+                  </div>
+                </label>
+                <!-- Online -->
+                <label class="flex items-center gap-3 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-teal-400" id="lbl-online">
+                  <input type="radio" name="course_type" value="online" class="accent-teal-500 mt-0.5 flex-shrink-0" onchange="highlightType()" />
+                  <div>
+                    <div class="flex items-center gap-2 mb-1">
+                      <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#00c0c1"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                      <p class="font-semibold text-sm" style="font-family:Inter,sans-serif" data-i18n="reg.onlineTitle">Online</p>
+                    </div>
+                    <p class="text-gray-400 text-xs" style="font-family:Inter,sans-serif" data-i18n="reg.onlineSub">Live via Zoom</p>
+                  </div>
+                </label>
+              </div>
             </div>
-            <div>
-              <label class="form-label">Class Format</label>
-              <select class="form-input">
-                <option value="">Select format...</option>
-                <option>Group class (max 6 students)</option>
-                <option>Private 1-on-1 lesson</option>
-                <option>Semi-private (2-3 students)</option>
+
+            <!-- Spanish Level -->
+            <div class="mb-5">
+              <label class="form-label" data-i18n="reg.level">Spanish Level *</label>
+              <select class="form-input" required>
+                <option value="" data-i18n="reg.levelPh">Select your level...</option>
+                <option value="beginner0" data-i18n="reg.level1">Complete Beginner (no Spanish at all)</option>
+                <option value="beginner" data-i18n="reg.level2">Beginner (basic greetings &amp; vocabulary)</option>
+                <option value="intermediate" data-i18n="reg.level3">Intermediate (can hold simple conversations)</option>
+                <option value="upper-intermediate" data-i18n="reg.level4">Upper Intermediate</option>
+                <option value="advanced" data-i18n="reg.level5">Advanced</option>
               </select>
             </div>
-          </div>
 
-          <div>
-            <label class="form-label">Schedule Preference *</label>
-            <select class="form-input" required>
-              <option value="">Select preference...</option>
-              <option>Morning (8:00 – 12:00 Bolivia time)</option>
-              <option>Afternoon (12:00 – 16:00 Bolivia time)</option>
-              <option>Evening (16:00 – 19:00 Bolivia time)</option>
-              <option>Flexible</option>
-            </select>
-          </div>
+            <!-- START DATE + SCHEDULE (always visible) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+              <div>
+                <label class="form-label" data-i18n="reg.startDate">Preferred Start Date *</label>
+                <input type="date" class="form-input" required />
+              </div>
+              <div>
+                <label class="form-label" data-i18n="reg.schedule">Schedule Preference *</label>
+                <select class="form-input" required>
+                  <option value="" data-i18n="reg.schedulePh">Select preference...</option>
+                  <option value="morning" data-i18n="reg.schedule1">Morning</option>
+                  <option value="afternoon" data-i18n="reg.schedule2">Afternoon</option>
+                  <option value="evening" data-i18n="reg.schedule3">Evening</option>
+                  <option value="flexible" data-i18n="reg.schedule4">Flexible</option>
+                </select>
+              </div>
+            </div>
 
-          <div>
-            <label class="form-label">How long do you plan to study?</label>
-            <select class="form-input">
-              <option value="">Select duration...</option>
-              <option>1 week</option>
-              <option>2 weeks</option>
-              <option>1 month</option>
-              <option>2–3 months</option>
-              <option>Long-term / ongoing</option>
-            </select>
+            <!-- ── FACE-TO-FACE FIELDS (shown when presencial is selected) ── -->
+            <div id="section-f2f" class="hidden space-y-5">
+
+              <!-- Program type -->
+              <div>
+                <label class="form-label mb-3 block">Program *</label>
+                <div class="grid grid-cols-1 gap-3">
+
+                  <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-300" id="lbl-prog-gi">
+                    <input type="radio" name="f2f_program" value="group-immersion" class="accent-red-500 flex-shrink-0" />
+                    <div>
+                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Group Immersion</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">Max 4 students · Mon–Fri 8:30–12:30</p>
+                    </div>
+                  </label>
+
+                  <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-300" id="lbl-prog-duo">
+                    <input type="radio" name="f2f_program" value="duo" class="accent-red-500 flex-shrink-0" />
+                    <div>
+                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Duo Dynamics</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">2 students · study with a travel partner</p>
+                    </div>
+                  </label>
+
+                  <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-300" id="lbl-prog-priv">
+                    <input type="radio" name="f2f_program" value="private" class="accent-red-500 flex-shrink-0" />
+                    <div>
+                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Private Excellence</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">1-on-1 · 20h/week · full flexibility</p>
+                    </div>
+                  </label>
+
+                  <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-300" id="lbl-prog-cc">
+                    <input type="radio" name="f2f_program" value="cultural-connection" class="accent-red-500 flex-shrink-0" />
+                    <div>
+                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Cultural Connection</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">Larger group · most affordable option</p>
+                    </div>
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- Duration -->
+              <div>
+                <label class="form-label" data-i18n="reg.duration">How long do you plan to study?</label>
+                <select class="form-input" id="f2f-duration">
+                  <option value="" data-i18n="reg.durationPh">Select duration...</option>
+                  <option value="1w" data-i18n="reg.duration1">1 week</option>
+                  <option value="2w" data-i18n="reg.duration2">2 weeks</option>
+                  <option value="1m" data-i18n="reg.duration3">1 month</option>
+                  <option value="2-3m" data-i18n="reg.duration4">2–3 months</option>
+                  <option value="ongoing" data-i18n="reg.duration5">Long-term / ongoing</option>
+                </select>
+              </div>
+
+              <!-- Accommodation -->
+              <div>
+                <label class="form-label">Accommodation</label>
+                <select class="form-input" id="accom-select" onchange="toggleHostFamily()">
+                  <option value="none">No thanks — I've arranged my own</option>
+                  <option value="host-family">Yes — I'd like a host family</option>
+                  <option value="hotel">Yes — please recommend hotels / hostels</option>
+                </select>
+              </div>
+
+              <!-- Host Family details (shown only when host-family is selected) -->
+              <div id="section-host-family" class="hidden rounded-2xl p-5 space-y-5" style="background:rgba(0,192,193,0.06);border:1.5px solid rgba(0,192,193,0.20)">
+                <p class="text-sm font-semibold" style="font-family:Inter,sans-serif;color:#00c0c1">Host Family Details</p>
+
+                <!-- Check-in / Check-out -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="form-label">Check-in Date *</label>
+                    <input type="date" class="form-input" id="hf-checkin" />
+                  </div>
+                  <div>
+                    <label class="form-label">Check-out Date *</label>
+                    <input type="date" class="form-input" id="hf-checkout" />
+                  </div>
+                </div>
+
+                <!-- Meals -->
+                <div>
+                  <label class="form-label mb-2 block">Meals included</label>
+                  <div class="flex flex-wrap gap-3">
+                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
+                      <input type="checkbox" name="hf_meals" value="breakfast" class="accent-teal-500" />
+                      Breakfast
+                    </label>
+                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
+                      <input type="checkbox" name="hf_meals" value="lunch" class="accent-teal-500" />
+                      Lunch
+                    </label>
+                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
+                      <input type="checkbox" name="hf_meals" value="dinner" class="accent-teal-500" />
+                      Dinner
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Dietary restrictions -->
+                <div>
+                  <label class="form-label mb-2 block">Dietary restrictions / allergies</label>
+                  <div class="flex flex-wrap gap-3 mb-3">
+                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
+                      <input type="checkbox" name="hf_diet" value="vegetarian" class="accent-teal-500" onchange="toggleOtherDiet()" />
+                      Vegetarian
+                    </label>
+                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
+                      <input type="checkbox" name="hf_diet" value="vegan" class="accent-teal-500" onchange="toggleOtherDiet()" />
+                      Vegan
+                    </label>
+                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
+                      <input type="checkbox" name="hf_diet" value="gluten-free" class="accent-teal-500" onchange="toggleOtherDiet()" />
+                      Gluten-free
+                    </label>
+                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
+                      <input type="checkbox" name="hf_diet" value="halal" class="accent-teal-500" onchange="toggleOtherDiet()" />
+                      Halal
+                    </label>
+                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
+                      <input type="checkbox" name="hf_diet" value="nut-allergy" class="accent-teal-500" onchange="toggleOtherDiet()" />
+                      Nut allergy
+                    </label>
+                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
+                      <input type="checkbox" id="diet-other-cb" name="hf_diet" value="other" class="accent-teal-500" onchange="toggleOtherDiet()" />
+                      Other
+                    </label>
+                  </div>
+                  <input type="text" id="diet-other-input" class="form-input hidden" placeholder="Please specify..." />
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ── ONLINE FIELDS (shown when online is selected) ── -->
+            <div id="section-online" class="hidden space-y-5">
+
+              <!-- Course type -->
+              <div>
+                <label class="form-label mb-3 block">Course Type *</label>
+                <div class="grid grid-cols-1 gap-3">
+
+                  <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-teal-300" id="lbl-oc-conv">
+                    <input type="radio" name="online_course" value="conversation" class="accent-teal-500 flex-shrink-0" />
+                    <div>
+                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Conversation Class</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">Speaking &amp; listening — no textbooks, pure practice</p>
+                    </div>
+                  </label>
+
+                  <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-teal-300" id="lbl-oc-couple">
+                    <input type="radio" name="online_course" value="couple" class="accent-teal-500 flex-shrink-0" />
+                    <div>
+                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Couple Class</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">2 students + 1 teacher — study with a friend or partner</p>
+                    </div>
+                  </label>
+
+                  <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-teal-300" id="lbl-oc-regular">
+                    <input type="radio" name="online_course" value="regular" class="accent-teal-500 flex-shrink-0" />
+                    <div>
+                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Regular Spanish Program</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">Grammar &amp; practice — step by step from your level</p>
+                    </div>
+                  </label>
+
+                  <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-teal-300" id="lbl-oc-dele">
+                    <input type="radio" name="online_course" value="dele" class="accent-teal-500 flex-shrink-0" />
+                    <div>
+                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">DELE Exam Preparation</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">Reading, writing, listening &amp; speaking for official exam</p>
+                    </div>
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- Hours pack -->
+              <div>
+                <label class="form-label">Hours / Pack *</label>
+                <div class="grid grid-cols-3 gap-3">
+
+                  <label class="flex flex-col items-center text-center p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-teal-300" id="lbl-pack-trial">
+                    <input type="radio" name="online_pack" value="trial" class="accent-teal-500 mb-2" />
+                    <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Trial</p>
+                    <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">1 hour · no commitment</p>
+                  </label>
+
+                  <label class="flex flex-col items-center text-center p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-teal-300" id="lbl-pack-starter">
+                    <input type="radio" name="online_pack" value="starter" class="accent-teal-500 mb-2" />
+                    <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Starter</p>
+                    <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">5 hours · 60 days</p>
+                  </label>
+
+                  <label class="flex flex-col items-center text-center p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-teal-300" id="lbl-pack-immersion">
+                    <input type="radio" name="online_pack" value="immersion" class="accent-teal-500 mb-2" />
+                    <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Immersion</p>
+                    <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">10 hours · 3 months</p>
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- Timezone -->
+              <div>
+                <label class="form-label">Your Timezone</label>
+                <input type="text" class="form-input" placeholder="e.g. UTC+1, EST, CET, GMT+2..." />
+              </div>
+
+            </div>
+
           </div>
 
           <hr class="border-gray-100 my-2" />
 
           <div>
-            <label class="form-label">How did you hear about us?</label>
+            <label class="form-label" data-i18n="reg.source">How did you hear about us?</label>
             <select class="form-input">
-              <option value="">Select...</option>
-              <option>Google search</option>
-              <option>Instagram</option>
-              <option>Facebook</option>
-              <option>Friend / word of mouth</option>
-              <option>Travel blog or forum</option>
-              <option>Travel agency</option>
-              <option>Other</option>
+              <option value="" data-i18n="reg.sourcePh">Select...</option>
+              <option value="google" data-i18n="reg.source1">Google search</option>
+              <option value="instagram" data-i18n="reg.source2">Instagram</option>
+              <option value="facebook" data-i18n="reg.source3">Facebook</option>
+              <option value="word-of-mouth" data-i18n="reg.source4">Friend / word of mouth</option>
+              <option value="blog" data-i18n="reg.source5">Travel blog or forum</option>
+              <option value="agency" data-i18n="reg.source6">Travel agency</option>
+              <option value="other" data-i18n="reg.source7">Other</option>
             </select>
           </div>
 
           <div>
-            <label class="form-label">Anything else you'd like us to know?</label>
-            <textarea class="form-input" rows="4" placeholder="Learning goals, special needs, questions..."></textarea>
+            <label class="form-label" data-i18n="reg.notes">Anything else you'd like us to know?</label>
+            <textarea class="form-input" rows="4" data-i18n="reg.notesPh" placeholder="Learning goals, special needs, questions..."></textarea>
           </div>
 
-          <button type="submit" class="btn-primary w-full text-center text-base py-4">Submit Registration</button>
-          <p class="text-center text-xs text-gray-400">We'll contact you within 24 hours to confirm your enrollment and discuss next steps.</p>
+          <button type="submit" class="btn-red w-full text-center text-base py-4" style="font-family:Inter,sans-serif" data-i18n="reg.submit">Submit Registration</button>
+          <p class="text-center text-xs text-gray-400" style="font-family:Inter,sans-serif" data-i18n="reg.privacy">We'll contact you within 24 hours to confirm your enrollment and discuss next steps.</p>
+
         </form>
 
-        <!-- Success state -->
-        <div id="reg-success" class="hidden text-center py-16">
-          <div class="text-6xl mb-6">🎉</div>
-          <h3 class="section-title text-3xl mb-3">You're In!</h3>
-          <p class="text-gray-500 mb-8 max-w-sm mx-auto">Thank you for registering. We'll contact you within 24 hours via email or WhatsApp to confirm your enrollment.</p>
-          <a href="index.html" class="btn-primary">Back to Home</a>
+        <!-- Success State -->
+        <div id="reg-success" class="hidden text-center py-20">
+          <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background:rgba(0,192,193,0.12)">
+            <svg class="w-10 h-10" fill="none" stroke="#00c0c1" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <h3 class="section-title text-3xl mb-4" data-i18n="reg.successTitle">You're In!</h3>
+          <p class="text-gray-500 mb-8 max-w-sm mx-auto" style="font-family:Lora,serif" data-i18n="reg.successText">Thank you for registering. We'll contact you within 24 hours via email or WhatsApp to confirm your enrollment.</p>
+          <a href="index.html" class="btn-red" data-i18n="reg.backHome">Back to Home</a>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-300 py-16">
+  <footer style="background:#1a1a1a" class="text-gray-300 py-16">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-10 mb-10">
         <div>
-          <p class="text-white font-black text-xl mb-3" style="font-family:Montserrat,sans-serif">Me Gusta <span style="color:#ff2850">Spanish</span></p>
-          <p class="text-sm" data-i18n="footer.tagline">The most fun & friendly Spanish school in Sucre, Bolivia.</p>
+          <p class="text-white font-black text-xl mb-3" style="font-family:'Cormorant Garamond',serif">Me Gusta <span style="color:#ff2850">Spanish</span></p>
+          <p class="text-sm" style="font-family:Lora,serif" data-i18n="footer.tagline">The most fun &amp; friendly Spanish school in Sucre, Bolivia.</p>
         </div>
         <div>
-          <p class="text-white font-semibold mb-4" data-i18n="footer.quickLinks">Quick Links</p>
-          <ul class="space-y-2 text-sm">
+          <p class="text-white font-semibold mb-4" style="font-family:Inter,sans-serif" data-i18n="footer.quickLinks">Quick Links</p>
+          <ul class="space-y-2 text-sm" style="font-family:Inter,sans-serif">
             <li><a href="index.html" class="hover:text-white transition-colors" data-i18n="nav.home">Home</a></li>
             <li><a href="clases.html" class="hover:text-white transition-colors" data-i18n="nav.classes">Classes</a></li>
             <li><a href="sobre-nosotros.html" class="hover:text-white transition-colors" data-i18n="nav.about">About Us</a></li>
+            <li><a href="faq.html" class="hover:text-white transition-colors" data-i18n="nav.faq">FAQ</a></li>
             <li><a href="contacto.html" class="hover:text-white transition-colors" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <p class="text-white font-semibold mb-4" data-i18n="footer.contact">Contact</p>
-          <ul class="space-y-2 text-sm">
-            <li>📍 Audiencia #97, Sucre, Bolivia</li>
-            <li>📞 +591 734 25725</li>
-            <li>✉️ info@megustaspanish.com</li>
+          <p class="text-white font-semibold mb-4" style="font-family:Inter,sans-serif" data-i18n="footer.contact">Contact</p>
+          <ul class="space-y-3 text-sm" style="font-family:Inter,sans-serif">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#00c0c1"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Audiencia #97, Sucre, Bolivia</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#00c0c1"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <span>+591 734 25725</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#00c0c1"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>info@megustaspanish.com</span>
+            </li>
           </ul>
         </div>
         <div>
-          <p class="text-white font-semibold mb-4">Language</p>
+          <p class="text-white font-semibold mb-4" style="font-family:Inter,sans-serif">Language</p>
           <div class="flex gap-2">
             <button class="lang-btn text-gray-300" data-lang="en">EN</button>
             <button class="lang-btn text-gray-300" data-lang="es">ES</button>
@@ -240,13 +500,13 @@
           </div>
         </div>
       </div>
-      <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-        © 2026 Me Gusta Spanish. <span data-i18n="footer.rights">All rights reserved.</span>
+      <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500" style="font-family:Inter,sans-serif">
+        &copy; 2026 Me Gusta Spanish. <span data-i18n="footer.rights">All rights reserved.</span>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/5917342572?text=Hello!%20I'm%20interested%20in%20Spanish%20classes." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <a href="https://wa.me/59173225725?text=Hello!%20I'm%20interested%20in%20Spanish%20classes." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
@@ -258,11 +518,59 @@
       document.getElementById('reg-form').classList.add('hidden');
       document.getElementById('reg-success').classList.remove('hidden');
     }
+
     function highlightType() {
       const f2f = document.querySelector('input[value="face-to-face"]').checked;
-      document.getElementById('lbl-f2f').style.borderColor = f2f ? '#ff2850' : '#e5e7eb';
+
+      // Highlight course type cards
+      document.getElementById('lbl-f2f').style.borderColor    = f2f  ? '#ff2850' : '#e5e7eb';
       document.getElementById('lbl-online').style.borderColor = !f2f ? '#00c0c1' : '#e5e7eb';
+
+      // Show/hide conditional sections
+      document.getElementById('section-f2f').classList.toggle('hidden', !f2f);
+      document.getElementById('section-online').classList.toggle('hidden', f2f);
+
+      // Toggle required on program/pack radios so form validates correctly
+      document.querySelectorAll('input[name="f2f_program"]').forEach(r => r.required = f2f);
+      document.querySelectorAll('input[name="online_pack"]').forEach(r => r.required = !f2f);
+      document.querySelectorAll('input[name="online_course"]').forEach(r => r.required = !f2f);
     }
+
+    function toggleHostFamily() {
+      const val = document.getElementById('accom-select').value;
+      const section = document.getElementById('section-host-family');
+      const isHF = val === 'host-family';
+      section.classList.toggle('hidden', !isHF);
+      document.getElementById('hf-checkin').required  = isHF;
+      document.getElementById('hf-checkout').required = isHF;
+    }
+
+    function toggleOtherDiet() {
+      const checked = document.getElementById('diet-other-cb').checked;
+      document.getElementById('diet-other-input').classList.toggle('hidden', !checked);
+    }
+
+    // Highlight selected program cards (face-to-face)
+    document.addEventListener('change', function(e) {
+      if (e.target.name === 'f2f_program') {
+        ['lbl-prog-gi','lbl-prog-duo','lbl-prog-priv','lbl-prog-cc'].forEach(id => {
+          document.getElementById(id).style.borderColor = '#e5e7eb';
+        });
+        e.target.closest('label').style.borderColor = '#ff2850';
+      }
+      if (e.target.name === 'online_course') {
+        ['lbl-oc-conv','lbl-oc-couple','lbl-oc-regular','lbl-oc-dele'].forEach(id => {
+          document.getElementById(id).style.borderColor = '#e5e7eb';
+        });
+        e.target.closest('label').style.borderColor = '#00c0c1';
+      }
+      if (e.target.name === 'online_pack') {
+        ['lbl-pack-trial','lbl-pack-starter','lbl-pack-immersion'].forEach(id => {
+          document.getElementById(id).style.borderColor = '#e5e7eb';
+        });
+        e.target.closest('label').style.borderColor = '#00c0c1';
+      }
+    });
   </script>
 </body>
 </html>

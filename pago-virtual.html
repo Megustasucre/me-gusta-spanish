@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --bg-color: #F3F4F6;
+            --card-bg: #FFFFFF;
+            --text-main: #111827;
+            --text-muted: #6B7280;
+            --border-color: #E5E7EB;
+            --success: #10B981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-main);
+        }
+
+        .checkout-container {
+            display: flex;
+            background: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            width: 100%;
+            max-width: 900px;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .checkout-container {
+                flex-direction: row;
+            }
+        }
+
+        /* ----- Order Summary Section ----- */
+        .order-summary {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            color: white;
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .order-summary h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .total span:last-child {
+            font-size: 2rem;
+        }
+
+        /* ----- Payment Form Section ----- */
+        .payment-details {
+            padding: 40px;
+            flex: 1.2;
+        }
+
+        .payment-details h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .payment-details p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            outline: none;
+            background: #F9FAFB;
+        }
+
+        input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+            background: white;
+        }
+
+        .row {
+            display: flex;
+            gap: 16px;
+        }
+
+        .row .form-group {
+            flex: 1;
+        }
+
+        .pay-button {
+            width: 100%;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pay-button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .pay-button:active {
+            transform: scale(0.98);
+        }
+
+        .pay-button:disabled {
+            background-color: var(--text-muted);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 16px;
+        }
+
+        /* --- Loader Animation --- */
+        .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .success-message svg {
+            width: 64px;
+            height: 64px;
+            color: var(--success);
+            margin-bottom: 16px;
+        }
+
+        .success-message h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .success-message p {
+            color: var(--text-muted);
+        }
+    </style>
+
+  <title>Secure Payment — Me Gusta Spanish</title>
+  <meta name="description" content="Secure payment gateway for Me Gusta Spanish School." />
+  <link rel="icon" type="image/png" href="Imagenes/favicon.png" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Secure Payment — Me Gusta Spanish" />
+  <meta property="og:description" content="Secure payment gateway for Me Gusta Spanish School." />
+  <meta property="og:image" content="https://megustaspanish.com/Imagenes/favicon.png" />
+  <meta property="og:url" content="https://megustaspanish.com/pago-virtual.html" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Secure Payment — Me Gusta Spanish" />
+  <meta name="twitter:description" content="Secure payment gateway for Me Gusta Spanish School." />
+  <meta name="twitter:image" content="https://megustaspanish.com/Imagenes/favicon.png" />
+  
+  <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+
+    <div class="checkout-container">
+        
+        <!-- Resumen de compra -->
+        <div class="order-summary">
+            <div>
+                <h2>Resumen de Inscripción</h2>
+                <div class="item">
+                    <span>Curso de Español - Intensivo</span>
+                    <span>$299.00</span>
+                </div>
+                <div class="item">
+                    <span>Matrícula</span>
+                    <span>$50.00</span>
+                </div>
+                <div class="item">
+                    <span>Descuento (PROMO10)</span>
+                    <span>-$34.90</span>
+                </div>
+            </div>
+            
+            <div class="total">
+                <span>Total a pagar</span>
+                <span>$314.10</span>
+            </div>
+        </div>
+
+        <!-- Formulario de Pago -->
+        <div class="payment-details">
+            <div id="paymentFormContainer">
+                <h2>Detalles de Pago</h2>
+                <p>Completa tu pago de forma segura.</p>
+
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="cardType">Método de pago</label>
+                        <select id="cardType" style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; background: #F9FAFB; outline: none;">
+                            <option>Tarjeta de Crédito / Débito</option>
+                            <option>PayPal</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardName">Nombre en la tarjeta</label>
+                        <input type="text" id="cardName" placeholder="Ej. Juan Pérez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardNumber">Número de tarjeta</label>
+                        <!-- Usamos maxlength para simular el formato de 16 dígitos -->
+                        <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="expiry">Vencimiento</label>
+                            <input type="text" id="expiry" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvc">CVC</label>
+                            <input type="text" id="cvc" placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="pay-button" id="payBtn">
+                        <span id="btnText">Pagar $314.10</span>
+                        <div class="spinner" id="btnSpinner"></div>
+                    </button>
+
+                    <div class="secure-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        Pago 100% seguro y encriptado
+                    </div>
+                </form>
+            </div>
+
+            <!-- Mensaje de Éxito Oculto -->
+            <div class="success-message" id="successMessage">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <h3>¡Pago Completado!</h3>
+                <p>Tu inscripción a Me Gusta Spanish ha sido confirmada. Hemos enviado un recibo a tu correo.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script para simular interactividad -->
+    <script>
+        // Formateo automático del número de tarjeta (agrega espacios cada 4 dígitos)
+        document.getElementById('cardNumber').addEventListener('input', function (e) {
+            e.target.value = e.target.value.replace(/[^\d]/g, '').replace(/(.{4})/g, '$1 ').trim();
+        });
+
+        // Formateo automático de expiración (agrega el slash MM/AA)
+        document.getElementById('expiry').addEventListener('input', function (e) {
+            let inputChar = String.fromCharCode(e.keyCode);
+            let code = e.keyCode;
+            let allowedKeys = [8];
+            if (allowedKeys.indexOf(code) !== -1) return;
+
+            e.target.value = e.target.value.replace(
+                /[^0-9]/g, ''
+            ).replace(
+                /^([2-9])$/g, '0$1'
+            ).replace(
+                /^(1{1})([3-9]{1})$/g, '0$1/$2'
+            ).replace(
+                /^0{1,}/g, '0'
+            ).replace(
+                /^([0-1]{1}[0-9]{1})([0-9]{1,2}).*/g, '$1/$2'
+            );
+        });
+
+        // Simulación del proceso de pago al hacer submit
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evitamos que la página recargue
+            
+            const btn = document.getElementById('payBtn');
+            const btnText = document.getElementById('btnText');
+            const btnSpinner = document.getElementById('btnSpinner');
+            
+            // Estado de "Cargando"
+            btn.disabled = true;
+            btnText.textContent = "Procesando...";
+            btnText.style.marginRight = "8px";
+            btnSpinner.style.display = "block";
+
+            // Simulamos un delay de 2 segundos (conexión con pasarela de pago como Stripe/Paypal)
+            setTimeout(() => {
+                document.getElementById('paymentFormContainer').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+            }, 2500);
+        });
+    </script>
+</body>
+</html>
