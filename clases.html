@@ -43,36 +43,28 @@
 <body style="background:#fafaf8">
 
   <!-- ═══ NAVBAR ═══════════════════════════════════════ -->
-      <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" style="background:rgba(26,26,26,0.85);backdrop-filter:blur(12px)">
-    <div class="relative max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" style="background:rgba(26,26,26,0.85);backdrop-filter:blur(12px)">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex items-center gap-4">
 
-      <!-- Left links (desktop) -->
-      <div class="hidden md:flex items-center gap-6">
+      <!-- Left links (desktop) — flex-1 so logo stays truly centered -->
+      <div class="hidden md:flex items-center gap-6 flex-1">
         <a href="index.html" class="nav-link text-white" data-i18n="nav.home">Home</a>
         <a href="clases.html" class="nav-link nav-active text-white" data-i18n="nav.classes">Classes</a>
         <a href="metodologia.html" class="nav-link text-white" data-i18n="nav.methodology">Methodology</a>
         <a href="profesores.html" class="nav-link text-white" data-i18n="nav.teachers">Teachers</a>
       </div>
 
-      <!-- Logo centered — text on desktop (dark bg), image in mobile menu (white bg) -->
-      <a href="index.html" class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-1">
-        <span class="logo-text text-white font-bold text-2xl" style="font-family:'Cormorant Garamond',serif;letter-spacing:-0.5px">
-          Me Gusta <span style="color:#ff2850;font-style:italic">Spanish</span>
-        </span>
-      </a>
-      <!-- Mobile: show logo image (rendered on white menu bg) -->
-      <a href="index.html" class="md:hidden flex items-center gap-1">
-        <span class="logo-text text-white font-bold text-xl" style="font-family:'Cormorant Garamond',serif;letter-spacing:-0.5px">
-          Me Gusta <span style="color:#ff2850;font-style:italic">Spanish</span>
-        </span>
+      <!-- Logo (desktop + mobile) -->
+      <a href="index.html" class="flex-shrink-0" style="background:white;border-radius:10px;padding:4px 12px;line-height:0">
+        <img src="Imagenes/logo-me-gusta-spanish.png" alt="Me Gusta Spanish" style="height:42px;display:block">
       </a>
 
-      <!-- Right: links + lang + register (desktop) -->
-      <div class="hidden md:flex items-center gap-5">
+      <!-- Right: links + lang + register (desktop) — flex-1 justify-end -->
+      <div class="hidden md:flex items-center gap-5 flex-1 justify-end">
         <a href="sobre-nosotros.html" class="nav-link text-white" data-i18n="nav.about">About</a>
         <a href="contacto.html" class="nav-link text-white" data-i18n="nav.contact">Contact</a>
         <a href="faq.html" class="nav-link text-white" data-i18n="nav.faq">FAQ</a>
-        <div class="flex gap-1 ml-1">
+        <div class="flex gap-1">
           <button class="lang-btn text-white" data-lang="en">EN</button>
           <button class="lang-btn text-white" data-lang="es">ES</button>
           <button class="lang-btn text-white" data-lang="fr">FR</button>
@@ -81,18 +73,15 @@
       </div>
 
       <!-- Mobile hamburger -->
-      <button id="menu-btn" class="md:hidden text-white p-1">
+      <button id="menu-btn" class="md:hidden text-white p-1 ml-auto">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
 
-    <!-- Mobile menu (white bg — logo image fits here) -->
+    <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden bg-white shadow-xl px-6 pb-5">
-      <div class="flex justify-center py-4 border-b border-gray-100 mb-3">
-        <img src="Imagenes/logo-me-gusta-spanish.png" alt="Me Gusta Spanish" style="height:56px">
-      </div>
       <a href="index.html"          data-i18n="nav.home">Home</a>
       <a href="clases.html"         data-i18n="nav.classes">Classes</a>
       <a href="metodologia.html"    data-i18n="nav.methodology">Methodology</a>
