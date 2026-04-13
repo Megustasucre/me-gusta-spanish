@@ -203,139 +203,89 @@
               </div>
             </div>
 
-            <!-- ── FACE-TO-FACE FIELDS (shown when presencial is selected) ── -->
+            <!-- ── FACE-TO-FACE FIELDS ── -->
             <div id="section-f2f" class="hidden space-y-5">
 
-              <!-- Program type -->
+              <!-- Class Type -->
               <div>
-                <label class="form-label mb-3 block">Program *</label>
+                <label class="form-label mb-3 block">Class Type *</label>
                 <div class="grid grid-cols-1 gap-3">
-
                   <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-300" id="lbl-prog-gi">
-                    <input type="radio" name="f2f_program" value="group-immersion" class="accent-red-500 flex-shrink-0" />
+                    <input type="radio" name="f2f_program" value="group" class="accent-red-500 flex-shrink-0" />
                     <div>
-                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Group Immersion</p>
-                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">Max 4 students · Mon–Fri 8:30–12:30</p>
+                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Group Lessons</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">4–6 students</p>
                     </div>
                   </label>
-
                   <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-300" id="lbl-prog-duo">
-                    <input type="radio" name="f2f_program" value="duo" class="accent-red-500 flex-shrink-0" />
+                    <input type="radio" name="f2f_program" value="small-group" class="accent-red-500 flex-shrink-0" />
                     <div>
-                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Duo Dynamics</p>
-                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">2 students · study with a travel partner</p>
+                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Small Group Lessons</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">2–3 students</p>
                     </div>
                   </label>
-
                   <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-300" id="lbl-prog-priv">
                     <input type="radio" name="f2f_program" value="private" class="accent-red-500 flex-shrink-0" />
                     <div>
-                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Private Excellence</p>
-                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">1-on-1 · 20h/week · full flexibility</p>
+                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Private Lessons</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">1-on-1 with your teacher</p>
                     </div>
                   </label>
-
-                  <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-300" id="lbl-prog-cc">
-                    <input type="radio" name="f2f_program" value="cultural-connection" class="accent-red-500 flex-shrink-0" />
-                    <div>
-                      <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Cultural Connection</p>
-                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">Larger group · most affordable option</p>
-                    </div>
-                  </label>
-
                 </div>
               </div>
 
-              <!-- Duration -->
-              <div>
-                <label class="form-label" data-i18n="reg.duration">How long do you plan to study?</label>
-                <select class="form-input" id="f2f-duration">
-                  <option value="" data-i18n="reg.durationPh">Select duration...</option>
-                  <option value="1w" data-i18n="reg.duration1">1 week</option>
-                  <option value="2w" data-i18n="reg.duration2">2 weeks</option>
-                  <option value="1m" data-i18n="reg.duration3">1 month</option>
-                  <option value="2-3m" data-i18n="reg.duration4">2–3 months</option>
-                  <option value="ongoing" data-i18n="reg.duration5">Long-term / ongoing</option>
-                </select>
+              <!-- Hotel / Hostal + Arrival Date -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label class="form-label">Hotel / Hostal</label>
+                  <input type="text" class="form-input" placeholder="Where are you staying?" />
+                </div>
+                <div>
+                  <label class="form-label">Arrival Date</label>
+                  <input type="date" class="form-input" />
+                </div>
               </div>
 
-              <!-- Accommodation -->
+              <!-- End Date -->
               <div>
-                <label class="form-label">Accommodation</label>
-                <select class="form-input" id="accom-select" onchange="toggleHostFamily()">
-                  <option value="none">No thanks — I've arranged my own</option>
-                  <option value="host-family">Yes — I'd like a host family</option>
-                  <option value="hotel">Yes — please recommend hotels / hostels</option>
-                </select>
+                <label class="form-label">Ending Date</label>
+                <input type="date" class="form-input" />
               </div>
 
-              <!-- Host Family details (shown only when host-family is selected) -->
+              <!-- Host Family -->
+              <div>
+                <label class="form-label mb-3 block">Are you interested in a host family?</label>
+                <div class="flex gap-6">
+                  <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
+                    <input type="radio" name="host_family" value="yes" class="accent-teal-500" onchange="toggleHostFamily()" /> Yes
+                  </label>
+                  <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
+                    <input type="radio" name="host_family" value="no" class="accent-teal-500" onchange="toggleHostFamily()" checked /> No
+                  </label>
+                </div>
+              </div>
+
+              <!-- Host Family details -->
               <div id="section-host-family" class="hidden rounded-2xl p-5 space-y-5" style="background:rgba(0,192,193,0.06);border:1.5px solid rgba(0,192,193,0.20)">
                 <p class="text-sm font-semibold" style="font-family:Inter,sans-serif;color:#00c0c1">Host Family Details</p>
-
-                <!-- Check-in / Check-out -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label class="form-label">Check-in Date *</label>
+                    <label class="form-label">Check-in Date</label>
                     <input type="date" class="form-input" id="hf-checkin" />
                   </div>
                   <div>
-                    <label class="form-label">Check-out Date *</label>
+                    <label class="form-label">Check-out Date</label>
                     <input type="date" class="form-input" id="hf-checkout" />
                   </div>
                 </div>
-
-                <!-- Meals -->
                 <div>
-                  <label class="form-label mb-2 block">Meals included</label>
-                  <div class="flex flex-wrap gap-3">
-                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
-                      <input type="checkbox" name="hf_meals" value="breakfast" class="accent-teal-500" />
-                      Breakfast
-                    </label>
-                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
-                      <input type="checkbox" name="hf_meals" value="lunch" class="accent-teal-500" />
-                      Lunch
-                    </label>
-                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
-                      <input type="checkbox" name="hf_meals" value="dinner" class="accent-teal-500" />
-                      Dinner
-                    </label>
-                  </div>
+                  <label class="form-label">Diet Type</label>
+                  <input type="text" class="form-input" placeholder="e.g. vegetarian, vegan, no restrictions..." />
                 </div>
-
-                <!-- Dietary restrictions -->
                 <div>
-                  <label class="form-label mb-2 block">Dietary restrictions / allergies</label>
-                  <div class="flex flex-wrap gap-3 mb-3">
-                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
-                      <input type="checkbox" name="hf_diet" value="vegetarian" class="accent-teal-500" onchange="toggleOtherDiet()" />
-                      Vegetarian
-                    </label>
-                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
-                      <input type="checkbox" name="hf_diet" value="vegan" class="accent-teal-500" onchange="toggleOtherDiet()" />
-                      Vegan
-                    </label>
-                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
-                      <input type="checkbox" name="hf_diet" value="gluten-free" class="accent-teal-500" onchange="toggleOtherDiet()" />
-                      Gluten-free
-                    </label>
-                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
-                      <input type="checkbox" name="hf_diet" value="halal" class="accent-teal-500" onchange="toggleOtherDiet()" />
-                      Halal
-                    </label>
-                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
-                      <input type="checkbox" name="hf_diet" value="nut-allergy" class="accent-teal-500" onchange="toggleOtherDiet()" />
-                      Nut allergy
-                    </label>
-                    <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
-                      <input type="checkbox" id="diet-other-cb" name="hf_diet" value="other" class="accent-teal-500" onchange="toggleOtherDiet()" />
-                      Other
-                    </label>
-                  </div>
-                  <input type="text" id="diet-other-input" class="form-input hidden" placeholder="Please specify..." />
+                  <label class="form-label">Allergies</label>
+                  <input type="text" class="form-input" placeholder="e.g. nuts, gluten, dairy..." />
                 </div>
-
               </div>
 
             </div>
@@ -547,17 +497,8 @@
     }
 
     function toggleHostFamily() {
-      const val = document.getElementById('accom-select').value;
-      const section = document.getElementById('section-host-family');
-      const isHF = val === 'host-family';
-      section.classList.toggle('hidden', !isHF);
-      document.getElementById('hf-checkin').required  = isHF;
-      document.getElementById('hf-checkout').required = isHF;
-    }
-
-    function toggleOtherDiet() {
-      const checked = document.getElementById('diet-other-cb').checked;
-      document.getElementById('diet-other-input').classList.toggle('hidden', !checked);
+      const isHF = document.querySelector('input[name="host_family"]:checked')?.value === 'yes';
+      document.getElementById('section-host-family').classList.toggle('hidden', !isHF);
     }
 
     // Highlight selected program cards (face-to-face)
