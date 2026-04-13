@@ -208,20 +208,21 @@
 
               <!-- Class Type -->
               <div>
-                <label class="form-label mb-3 block">Class Type *</label>
+                <label class="form-label mb-2 block">Type of class of preference *</label>
+                <p class="text-xs text-gray-400 mb-3" style="font-family:Inter,sans-serif">Groups and Small Groups are subject to availability according to the Spanish level of our students, their arrival dates and other factors. The school doesn't guarantee that a group is going to be available for you.</p>
                 <div class="grid grid-cols-1 gap-3">
                   <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-300" id="lbl-prog-gi">
                     <input type="radio" name="f2f_program" value="group" class="accent-red-500 flex-shrink-0" />
                     <div>
                       <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Group Lessons</p>
-                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">4–6 students</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">4–6 people, subject to availability</p>
                     </div>
                   </label>
                   <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-300" id="lbl-prog-duo">
                     <input type="radio" name="f2f_program" value="small-group" class="accent-red-500 flex-shrink-0" />
                     <div>
                       <p class="font-semibold text-sm text-gray-800" style="font-family:Inter,sans-serif">Small Group Lessons</p>
-                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">2–3 students</p>
+                      <p class="text-xs text-gray-400" style="font-family:Inter,sans-serif">2–3 people, subject to availability</p>
                     </div>
                   </label>
                   <label class="flex items-center gap-4 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer transition-all hover:border-red-300" id="lbl-prog-priv">
@@ -237,8 +238,8 @@
               <!-- Hotel / Hostal + Arrival Date -->
               <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                  <label class="form-label">Hotel / Hostal</label>
-                  <input type="text" class="form-input" placeholder="Where are you staying?" />
+                  <label class="form-label">Hotel / Hostal where you stay / plan to stay</label>
+                  <input type="text" class="form-input" placeholder="Name of your hotel or hostal" />
                 </div>
                 <div>
                   <label class="form-label">Arrival Date</label>
@@ -246,15 +247,21 @@
                 </div>
               </div>
 
-              <!-- End Date -->
+              <!-- Ending Date -->
               <div>
                 <label class="form-label">Ending Date</label>
                 <input type="date" class="form-input" />
               </div>
 
+              <!-- Additional Information -->
+              <div>
+                <label class="form-label">Additional Information</label>
+                <textarea class="form-input" rows="4" placeholder="Learning goals, questions, special requests..."></textarea>
+              </div>
+
               <!-- Host Family -->
               <div>
-                <label class="form-label mb-3 block">Are you interested in a host family?</label>
+                <label class="form-label mb-3 block">Are you interested in staying with a Host Family?</label>
                 <div class="flex gap-6">
                   <label class="flex items-center gap-2 text-sm cursor-pointer" style="font-family:Inter,sans-serif">
                     <input type="radio" name="host_family" value="yes" class="accent-teal-500" onchange="toggleHostFamily()" /> Yes
@@ -267,24 +274,28 @@
 
               <!-- Host Family details -->
               <div id="section-host-family" class="hidden rounded-2xl p-5 space-y-5" style="background:rgba(0,192,193,0.06);border:1.5px solid rgba(0,192,193,0.20)">
-                <p class="text-sm font-semibold" style="font-family:Inter,sans-serif;color:#00c0c1">Host Family Details</p>
+                <p class="text-sm font-semibold" style="font-family:Inter,sans-serif;color:#00c0c1">Host Family Accommodation</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label class="form-label">Check-in Date</label>
+                    <label class="form-label">Check-In</label>
                     <input type="date" class="form-input" id="hf-checkin" />
                   </div>
                   <div>
-                    <label class="form-label">Check-out Date</label>
+                    <label class="form-label">Check-Out</label>
                     <input type="date" class="form-input" id="hf-checkout" />
                   </div>
                 </div>
                 <div>
-                  <label class="form-label">Diet Type</label>
+                  <label class="form-label">Type of Diet</label>
                   <input type="text" class="form-input" placeholder="e.g. vegetarian, vegan, no restrictions..." />
                 </div>
                 <div>
                   <label class="form-label">Allergies</label>
                   <input type="text" class="form-input" placeholder="e.g. nuts, gluten, dairy..." />
+                </div>
+                <div>
+                  <label class="form-label">Additional Information</label>
+                  <textarea class="form-input" rows="3" placeholder="Any other details for the host family..."></textarea>
                 </div>
               </div>
 
